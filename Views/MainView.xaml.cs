@@ -20,9 +20,11 @@ namespace Trabalho_final
     /// </summary>
     public partial class Calculadora : Window
     {
+       
         public Calculadora()
         {
             InitializeComponent();
         }
+
     }
 }

@@ -5,8 +5,73 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Trabalho_Final"
         mc:Ignorable="d"
-        Title="MainView" Height="450" Width="800">
-    <Grid>
+        Title="Calculadora" Height="540" Width="540" ResizeMode="NoResize" WindowStartupLocation="CenterScreen"> <!--PreviewKeyDown="Window_KeyDownPreview"-->
 
+        <!--Definindo um template para os botões-->
+    <Window.Resources>
+        <Style x:Key="NumberButtonStyle" TargetType="Button">
+            <Setter Property="FontSize" Value="22"/>
+            <Setter Property="Width" Value="95"/>
+            <Setter Property="Height" Value="60"/>
+            <Setter Property="HorizontalAlignment" Value="Left"/>
+            <Setter Property="VerticalAlignment" Value="Top"/>
+            <Setter Property="Margin" Value="1"/>
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="Button">
+                        <Border Background="{TemplateBinding Background}"
+                                BorderBrush="{TemplateBinding BorderBrush}"
+                                BorderThickness="{TemplateBinding BorderThickness}"
+                                CornerRadius="7">
+                            <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                        </Border>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+        </Style>
+    </Window.Resources>
+
+    <Grid HorizontalAlignment="Left" Width="340">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="170"/>
+            <RowDefinition Height="62"/>
+            <RowDefinition Height="62"/>
+            <RowDefinition Height="62"/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="97"/>
+            <ColumnDefinition Width="97"/>
+            <ColumnDefinition Width="97"/>
+            <ColumnDefinition Width="97"/>
+        </Grid.ColumnDefinitions>
+
+        <!--Linha 1-->
+        <Button x:Name="Seven" Style="{StaticResource NumberButtonStyle}" Content="7" Grid.Row="1" Grid.Column="0"/>        
+        <Button x:Name="Eight" Style="{StaticResource NumberButtonStyle}" Content="8" Grid.Row="1" Grid.Column="1"/>        
+        <Button x:Name="Nine" Style="{StaticResource NumberButtonStyle}" Content="9" Grid.Row="1" Grid.Column="2"/>        
+
+        <Button x:Name="Four" Style="{StaticResource NumberButtonStyle}" Content="4" Grid.Row="2" Grid.Column="0"/>        
+        <Button x:Name="Five" Style="{StaticResource NumberButtonStyle}" Content="5" Grid.Row="2" Grid.Column="1"/>        
+        <Button x:Name="Six" Style="{StaticResource NumberButtonStyle}" Content="6" Grid.Row="2" Grid.Column="2"/>
+
+        <Button x:Name="One" Style="{StaticResource NumberButtonStyle}" Content="1" Grid.Row="3" Grid.Column="0"/>        
+        <Button x:Name="Two" Style="{StaticResource NumberButtonStyle}" Content="2" Grid.Row="3" Grid.Column="1"/>        
+        <Button x:Name="Three" Style="{StaticResource NumberButtonStyle}" Content="3" Grid.Row="3" Grid.Column="2"/>  
+        
+        <!--<Button x:Name="Zero" Content="0" HorizontalAlignment="Left" Margin="13,273.717,0,0" VerticalAlignment="Top" Width="40" Height="40" FontSize="18" Click="Button_Click" Grid.Row="1"/>
+        -->
+        <!--
+        <Button x:Name="Plus" Content="+" HorizontalAlignment="Left" Margin="148,227.717,0,0" VerticalAlignment="Top" Width="40" Height="40" FontSize="18" Click="Button_Operand" Grid.Row="1" />
+        <Button x:Name="Minus" Content="-" HorizontalAlignment="Left" Margin="148,182.717,0,0" VerticalAlignment="Top" Width="40" Height="40" FontSize="18" Click="Button_Operand" Grid.Row="1"/>
+        <Button x:Name="Multiply" Content="×" HorizontalAlignment="Left" Margin="148,137.717,0,0" VerticalAlignment="Top" Width="40" Height="40" FontSize="18"  Click="Button_Operand" Grid.Row="1"/>
+        <Button x:Name="Equals" Content="=" HorizontalAlignment="Left" Margin="103,273,0,0" VerticalAlignment="Top" Width="85" Height="40" FontSize="18" Click="Button_Equals" Grid.Row="1"/>
+        <Button x:Name="Dot" Content="," HorizontalAlignment="Left" Margin="58,273.717,0,0" VerticalAlignment="Top" Width="40" Height="40" FontSize="18" Click="Button_Click" Grid.Row="1"/>
+        <Button x:Name="Clear" Content="C" HorizontalAlignment="Left" Margin="103,92.717,0,0" VerticalAlignment="Top" Width="40" Height="40" FontSize="18" Click="Clear_Click" Grid.Row="1"/>
+        <Button x:Name="Divide" Content="÷" HorizontalAlignment="Left" Margin="148,92.717,0,0" VerticalAlignment="Top" Width="40" Height="40" FontSize="18"  Click="Button_Operand" Grid.Row="1"/>
+        <Button x:Name="Clear_Copy" Content="CE" HorizontalAlignment="Left" Margin="13,92.717,0,0" VerticalAlignment="Top" Width="85" Height="40" FontSize="18" Click="CE_Click" Grid.Row="1"/>
+        <Label x:Name="Equation" Content="" HorizontalAlignment="Left" Margin="12,16.717,0,0" VerticalAlignment="Top" Width="118" Height="31" Grid.Row="1" Language="se-SE"/>
+        -->
+        <Label x:Name="Display" Content="0" Height="71" Margin="10,16.717,0,0" VerticalAlignment="Top" Width="175" HorizontalAlignment="Left" FontSize="22" Language="se-SE" HorizontalContentAlignment="Right" BorderThickness="7,0,0,0" VerticalContentAlignment="Center" Grid.Row="1"/>
+        
     </Grid>
 </Window>
