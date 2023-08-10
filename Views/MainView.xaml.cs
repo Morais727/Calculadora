@@ -79,6 +79,26 @@ namespace Trabalho_final
             Display.Content = equation;
         }
 
+        public void MemoryClear(object sender, RoutedEventArgs e)
+        {
+            Display.Content = "clear";
+        }
+
+        public void MemoryPlus(object sender, RoutedEventArgs e)
+        {
+            Display.Content = "plus";
+        }
+
+        public void MemoryMinus(object sender, RoutedEventArgs e)
+        {
+            Display.Content = "minus";
+        }
+
+        public void MemorySave(object sender, RoutedEventArgs e)
+        {
+            Display.Content = "save";
+        }
+
         private void Window_KeyDownPreview(object sender, KeyEventArgs e)
         {
             switch (e.Key)
@@ -170,7 +190,7 @@ namespace Trabalho_final
                 case Key.D0: // "("
                     equation += ")";
                     break;
-                case Key.Up: // ~
+                case Key.Up: // ^
                     equation += "^";
                     break;
                 
