@@ -6,10 +6,11 @@
         xmlns:sys="clr-namespace:System;assembly=mscorlib"
         xmlns:local="clr-namespace:Trabalho_Final"
         mc:Ignorable="d"
-        Title="Calculadora" Height="530" Width="680" ResizeMode="NoResize" WindowStartupLocation="CenterScreen" PreviewKeyDown="Window_KeyDownPreview"> 
+        Title="Calculadora" Height="562" Width="680" ResizeMode="NoResize" WindowStartupLocation="CenterScreen" PreviewKeyDown="Window_KeyDownPreview"> 
 
     <!--Definindo um template para os botões-->
     <Window.Resources>
+        <!--Botões comuns-->
         <Style x:Key="NumberButtonStyle" TargetType="Button">
             <Setter Property="FontSize" Value="24"/>
             <Setter Property="Width" Value="95"/>
@@ -35,6 +36,34 @@
                 </Trigger>
             </Style.Triggers>
         </Style>
+        
+        <!--Botões de memória-->
+        <Style x:Key="MemoryButtonStyle" TargetType="Button">
+            <Setter Property="FontSize" Value="18"/>
+            <Setter Property="Width" Value="95"/>
+            <Setter Property="Height" Value="30"/>
+            <Setter Property="HorizontalAlignment" Value="Left"/>
+            <Setter Property="VerticalAlignment" Value="Top"/>
+            <Setter Property="Margin" Value="1"/>
+            <Setter Property="Background" Value="Transparent"/>
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="Button">
+                        <Border Background="{TemplateBinding Background}"
+                                BorderBrush="{TemplateBinding BorderBrush}"
+                                BorderThickness="{TemplateBinding BorderThickness}"
+                                CornerRadius="5">
+                            <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                        </Border>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+            <Style.Triggers>
+                <Trigger Property="IsMouseOver" Value="True">
+                    <Setter Property="Background" Value="#F0F0F0"/>
+                </Trigger>
+            </Style.Triggers>
+        </Style>
     </Window.Resources>
 
     <!--Definindo duas colunas: uma para a calculadora e outra para o histórico-->
@@ -48,6 +77,7 @@
         <Grid HorizontalAlignment="Left" Width="Auto" Grid.Column="0">
             <Grid.RowDefinitions>
                 <RowDefinition Height="126"/>
+                <RowDefinition Height="32"/>
                 <RowDefinition Height="52"/>
                 <RowDefinition Height="52"/>
                 <RowDefinition Height="52"/>
@@ -55,7 +85,6 @@
                 <RowDefinition Height="52"/>
                 <RowDefinition Height="52"/>
                 <RowDefinition Height="52"/>
-
             </Grid.RowDefinitions>
             <Grid.ColumnDefinitions>
                 <ColumnDefinition Width="97"/>
@@ -71,10 +100,10 @@
             </Border>
 
             <!--Linha 1: Memory-->
-            <Button x:Name="MemClear" Style="{StaticResource NumberButtonStyle}" Content="MC" Background="Transparent" Click="MemoryClear" Grid.Row="1" Grid.Column="0"/>        
-            <Button x:Name="MemPlus" Style="{StaticResource NumberButtonStyle}" Content='M+' Background="Transparent" Click="MemoryPlus" Grid.Row="1" Grid.Column="1"/>
-            <Button x:Name="MemMinus" Style="{StaticResource NumberButtonStyle}" Content="M-" Background="Transparent" Click="MemoryMinus" Grid.Row="1" Grid.Column="2"/>
-            <Button x:Name="MemSave" Style="{StaticResource NumberButtonStyle}" Content="MS" Background="Transparent" Click="MemorySave" Grid.Row="1" Grid.Column="3"/>
+            <Button x:Name="MemClear" Style="{StaticResource MemoryButtonStyle}" Content="MC" Click="MemoryClear" Grid.Row="1" Grid.Column="0"/>        
+            <Button x:Name="MemPlus" Style="{StaticResource MemoryButtonStyle}" Content='M+' Click="MemoryPlus" Grid.Row="1" Grid.Column="1"/>
+            <Button x:Name="MemMinus" Style="{StaticResource MemoryButtonStyle}" Content="M-" Click="MemoryMinus" Grid.Row="1" Grid.Column="2"/>
+            <Button x:Name="MemSave" Style="{StaticResource MemoryButtonStyle}" Content="MS" Click="MemorySave" Grid.Row="1" Grid.Column="3"/>
 
             <!--Linha 2-->
             <Button x:Name="Pi" Style="{StaticResource NumberButtonStyle}" Content="π" Click="Constant" Grid.Row="2" Grid.Column="0"/>        
