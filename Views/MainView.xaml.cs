@@ -1,5 +1,6 @@
 using System;
 using System.Collections.Generic;
+using System.Data.SqlClient;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -12,6 +13,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using Trabalho_final.Controller;
 
 namespace Trabalho_final
 {
@@ -20,6 +22,9 @@ namespace Trabalho_final
     /// </summary>
     public partial class Calculadora : Window
     {
+       
+       Conexao conexao = new Conexao();
+
        private string equation;
        
         public Calculadora()
@@ -150,6 +155,8 @@ namespace Trabalho_final
                     break;
                 case Key.Enter: // =
                     equation += "=";
+                    //EXEMPLO USO CONEXAO SQL SERVER -- WILL
+                    conexao.getDBConnection("insert into historico_calc(dt_atualizacao, equacao, resultado) VALUES(SYSDATETIME(), '" + equation + "', '---');", "inserir");
                     break;
 
                 // Lógica para outros

@@ -44,3 +44,33 @@ C:\Users\henri\OneDrive\Documentos\Unicamp\Ciência da Computação\1º Semestre
 C:\Users\henri\OneDrive\Documentos\Unicamp\Ciência da Computação\1º Semestre\Curso msft\Aulas\Trabalho final\TrabalhoFinal\obj\Debug\net7.0-windows\Trabalho-Final.pdb
 C:\Users\henri\OneDrive\Documentos\Unicamp\Ciência da Computação\1º Semestre\Curso msft\Aulas\Trabalho final\TrabalhoFinal\obj\Debug\net7.0-windows\Trabalho-Final.genruntimeconfig.cache
 C:\Users\henri\OneDrive\Documentos\Unicamp\Ciência da Computação\1º Semestre\Curso msft\Aulas\Trabalho final\TrabalhoFinal\obj\Debug\net7.0-windows\ref\Trabalho-Final.dll
+D:\Curso Unicamp\Tecnologias Microsoft\Projeto Final\Repo\INF-0999 - Proj Final\bin\Debug\net7.0-windows\Trabalho-Final.exe
+d:\Curso Unicamp\Tecnologias Microsoft\Projeto Final\Repo\INF-0999 - Proj Final\bin\Debug\net7.0-windows\Trabalho-Final.deps.json
+d:\Curso Unicamp\Tecnologias Microsoft\Projeto Final\Repo\INF-0999 - Proj Final\bin\Debug\net7.0-windows\Trabalho-Final.runtimeconfig.json
+D:\Curso Unicamp\Tecnologias Microsoft\Projeto Final\Repo\INF-0999 - Proj Final\bin\Debug\net7.0-windows\Trabalho-Final.dll
+D:\Curso Unicamp\Tecnologias Microsoft\Projeto Final\Repo\INF-0999 - Proj Final\bin\Debug\net7.0-windows\Trabalho-Final.pdb
+D:\Curso Unicamp\Tecnologias Microsoft\Projeto Final\Repo\INF-0999 - Proj Final\obj\Debug\net7.0-windows\Trabalho-Final.csproj.AssemblyReference.cache
+D:\Curso Unicamp\Tecnologias Microsoft\Projeto Final\Repo\INF-0999 - Proj Final\obj\Debug\net7.0-windows\MainWindow.g.cs
+D:\Curso Unicamp\Tecnologias Microsoft\Projeto Final\Repo\INF-0999 - Proj Final\obj\Debug\net7.0-windows\Views\MainView.g.cs
+D:\Curso Unicamp\Tecnologias Microsoft\Projeto Final\Repo\INF-0999 - Proj Final\obj\Debug\net7.0-windows\App.g.cs
+D:\Curso Unicamp\Tecnologias Microsoft\Projeto Final\Repo\INF-0999 - Proj Final\obj\Debug\net7.0-windows\Trabalho-Final_MarkupCompile.cache
+D:\Curso Unicamp\Tecnologias Microsoft\Projeto Final\Repo\INF-0999 - Proj Final\obj\Debug\net7.0-windows\Trabalho-Final_MarkupCompile.lref
+D:\Curso Unicamp\Tecnologias Microsoft\Projeto Final\Repo\INF-0999 - Proj Final\obj\Debug\net7.0-windows\MainWindow.baml
+D:\Curso Unicamp\Tecnologias Microsoft\Projeto Final\Repo\INF-0999 - Proj Final\obj\Debug\net7.0-windows\Views\MainView.baml
+D:\Curso Unicamp\Tecnologias Microsoft\Projeto Final\Repo\INF-0999 - Proj Final\obj\Debug\net7.0-windows\Trabalho-Final.g.resources
+D:\Curso Unicamp\Tecnologias Microsoft\Projeto Final\Repo\INF-0999 - Proj Final\obj\Debug\net7.0-windows\Trabalho-Final.GeneratedMSBuildEditorConfig.editorconfig
+D:\Curso Unicamp\Tecnologias Microsoft\Projeto Final\Repo\INF-0999 - Proj Final\obj\Debug\net7.0-windows\Trabalho-Final.AssemblyInfoInputs.cache
+D:\Curso Unicamp\Tecnologias Microsoft\Projeto Final\Repo\INF-0999 - Proj Final\obj\Debug\net7.0-windows\Trabalho-Final.AssemblyInfo.cs
+D:\Curso Unicamp\Tecnologias Microsoft\Projeto Final\Repo\INF-0999 - Proj Final\obj\Debug\net7.0-windows\Trabalho-Final.csproj.CoreCompileInputs.cache
+D:\Curso Unicamp\Tecnologias Microsoft\Projeto Final\Repo\INF-0999 - Proj Final\obj\Debug\net7.0-windows\Trabalho-Final.dll
+D:\Curso Unicamp\Tecnologias Microsoft\Projeto Final\Repo\INF-0999 - Proj Final\obj\Debug\net7.0-windows\refint\Trabalho-Final.dll
+D:\Curso Unicamp\Tecnologias Microsoft\Projeto Final\Repo\INF-0999 - Proj Final\obj\Debug\net7.0-windows\Trabalho-Final.pdb
+d:\Curso Unicamp\Tecnologias Microsoft\Projeto Final\Repo\INF-0999 - Proj Final\obj\Debug\net7.0-windows\Trabalho-Final.genruntimeconfig.cache
+d:\Curso Unicamp\Tecnologias Microsoft\Projeto Final\Repo\INF-0999 - Proj Final\obj\Debug\net7.0-windows\ref\Trabalho-Final.dll
+D:\Curso Unicamp\Tecnologias Microsoft\Projeto Final\Repo\INF-0999 - Proj Final\bin\Debug\net7.0-windows\System.Data.SqlClient.dll
+D:\Curso Unicamp\Tecnologias Microsoft\Projeto Final\Repo\INF-0999 - Proj Final\bin\Debug\net7.0-windows\runtimes\win-arm64\native\sni.dll
+D:\Curso Unicamp\Tecnologias Microsoft\Projeto Final\Repo\INF-0999 - Proj Final\bin\Debug\net7.0-windows\runtimes\win-x64\native\sni.dll
+D:\Curso Unicamp\Tecnologias Microsoft\Projeto Final\Repo\INF-0999 - Proj Final\bin\Debug\net7.0-windows\runtimes\win-x86\native\sni.dll
+D:\Curso Unicamp\Tecnologias Microsoft\Projeto Final\Repo\INF-0999 - Proj Final\bin\Debug\net7.0-windows\runtimes\unix\lib\netcoreapp2.1\System.Data.SqlClient.dll
+D:\Curso Unicamp\Tecnologias Microsoft\Projeto Final\Repo\INF-0999 - Proj Final\bin\Debug\net7.0-windows\runtimes\win\lib\netcoreapp2.1\System.Data.SqlClient.dll
+d:\Curso Unicamp\Tecnologias Microsoft\Projeto Final\Repo\INF-0999 - Proj Final\obj\Debug\net7.0-windows\Trabalho-Final.csproj.CopyComplete
