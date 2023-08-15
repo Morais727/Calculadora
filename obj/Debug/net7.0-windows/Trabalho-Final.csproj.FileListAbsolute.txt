@@ -74,3 +74,33 @@ D:\Curso Unicamp\Tecnologias Microsoft\Projeto Final\Repo\INF-0999 - Proj Final\
 D:\Curso Unicamp\Tecnologias Microsoft\Projeto Final\Repo\INF-0999 - Proj Final\bin\Debug\net7.0-windows\runtimes\unix\lib\netcoreapp2.1\System.Data.SqlClient.dll
 D:\Curso Unicamp\Tecnologias Microsoft\Projeto Final\Repo\INF-0999 - Proj Final\bin\Debug\net7.0-windows\runtimes\win\lib\netcoreapp2.1\System.Data.SqlClient.dll
 d:\Curso Unicamp\Tecnologias Microsoft\Projeto Final\Repo\INF-0999 - Proj Final\obj\Debug\net7.0-windows\Trabalho-Final.csproj.CopyComplete
+D:\TechMS\Projeto Final\projfinal\INF-0999 - Proj Final\obj\Debug\net7.0-windows\Trabalho-Final.csproj.AssemblyReference.cache
+D:\TechMS\Projeto Final\projfinal\INF-0999 - Proj Final\obj\Debug\net7.0-windows\MainWindow.g.cs
+D:\TechMS\Projeto Final\projfinal\INF-0999 - Proj Final\obj\Debug\net7.0-windows\Views\MainView.g.cs
+D:\TechMS\Projeto Final\projfinal\INF-0999 - Proj Final\obj\Debug\net7.0-windows\App.g.cs
+D:\TechMS\Projeto Final\projfinal\INF-0999 - Proj Final\obj\Debug\net7.0-windows\Trabalho-Final_MarkupCompile.cache
+D:\TechMS\Projeto Final\projfinal\INF-0999 - Proj Final\obj\Debug\net7.0-windows\Trabalho-Final_MarkupCompile.lref
+D:\TechMS\Projeto Final\projfinal\INF-0999 - Proj Final\obj\Debug\net7.0-windows\Trabalho-Final.dll
+D:\TechMS\Projeto Final\projfinal\INF-0999 - Proj Final\obj\Debug\net7.0-windows\refint\Trabalho-Final.dll
+D:\TechMS\Projeto Final\projfinal\INF-0999 - Proj Final\obj\Debug\net7.0-windows\Trabalho-Final.pdb
+D:\TechMS\Projeto Final\projfinal\INF-0999 - Proj Final\bin\Debug\net7.0-windows\Trabalho-Final.exe
+d:\TechMS\Projeto Final\projfinal\INF-0999 - Proj Final\bin\Debug\net7.0-windows\Trabalho-Final.deps.json
+d:\TechMS\Projeto Final\projfinal\INF-0999 - Proj Final\bin\Debug\net7.0-windows\Trabalho-Final.runtimeconfig.json
+D:\TechMS\Projeto Final\projfinal\INF-0999 - Proj Final\bin\Debug\net7.0-windows\Trabalho-Final.dll
+D:\TechMS\Projeto Final\projfinal\INF-0999 - Proj Final\bin\Debug\net7.0-windows\Trabalho-Final.pdb
+D:\TechMS\Projeto Final\projfinal\INF-0999 - Proj Final\bin\Debug\net7.0-windows\System.Data.SqlClient.dll
+D:\TechMS\Projeto Final\projfinal\INF-0999 - Proj Final\bin\Debug\net7.0-windows\runtimes\win-arm64\native\sni.dll
+D:\TechMS\Projeto Final\projfinal\INF-0999 - Proj Final\bin\Debug\net7.0-windows\runtimes\win-x64\native\sni.dll
+D:\TechMS\Projeto Final\projfinal\INF-0999 - Proj Final\bin\Debug\net7.0-windows\runtimes\win-x86\native\sni.dll
+D:\TechMS\Projeto Final\projfinal\INF-0999 - Proj Final\bin\Debug\net7.0-windows\runtimes\unix\lib\netcoreapp2.1\System.Data.SqlClient.dll
+D:\TechMS\Projeto Final\projfinal\INF-0999 - Proj Final\bin\Debug\net7.0-windows\runtimes\win\lib\netcoreapp2.1\System.Data.SqlClient.dll
+D:\TechMS\Projeto Final\projfinal\INF-0999 - Proj Final\obj\Debug\net7.0-windows\MainWindow.baml
+D:\TechMS\Projeto Final\projfinal\INF-0999 - Proj Final\obj\Debug\net7.0-windows\Views\MainView.baml
+D:\TechMS\Projeto Final\projfinal\INF-0999 - Proj Final\obj\Debug\net7.0-windows\Trabalho-Final.g.resources
+D:\TechMS\Projeto Final\projfinal\INF-0999 - Proj Final\obj\Debug\net7.0-windows\Trabalho-Final.GeneratedMSBuildEditorConfig.editorconfig
+D:\TechMS\Projeto Final\projfinal\INF-0999 - Proj Final\obj\Debug\net7.0-windows\Trabalho-Final.AssemblyInfoInputs.cache
+D:\TechMS\Projeto Final\projfinal\INF-0999 - Proj Final\obj\Debug\net7.0-windows\Trabalho-Final.AssemblyInfo.cs
+D:\TechMS\Projeto Final\projfinal\INF-0999 - Proj Final\obj\Debug\net7.0-windows\Trabalho-Final.csproj.CoreCompileInputs.cache
+d:\TechMS\Projeto Final\projfinal\INF-0999 - Proj Final\obj\Debug\net7.0-windows\Trabalho-Final.csproj.CopyComplete
+d:\TechMS\Projeto Final\projfinal\INF-0999 - Proj Final\obj\Debug\net7.0-windows\Trabalho-Final.genruntimeconfig.cache
+d:\TechMS\Projeto Final\projfinal\INF-0999 - Proj Final\obj\Debug\net7.0-windows\ref\Trabalho-Final.dll

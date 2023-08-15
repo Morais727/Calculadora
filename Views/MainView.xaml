@@ -126,13 +126,13 @@
             <Button x:Name="Open" Style="{StaticResource NumberButtonStyle}" Content="(" Click="Button_Click" Grid.Row="4" Grid.Column="0"/>        
             <Button x:Name="Close" Style="{StaticResource NumberButtonStyle}" Content=")" Click="Button_Click" Grid.Row="4" Grid.Column="1"/>
             <Button x:Name="Sqr" Style="{StaticResource NumberButtonStyle}" Content="x²" Click="Square" Grid.Row="4" Grid.Column="2"/>
-            <Button x:Name="Division" Style="{StaticResource NumberButtonStyle}" Content="÷" Click="Button_Click" Grid.Row="4" Grid.Column="3"/>
+            <Button x:Name="Division" Style="{StaticResource NumberButtonStyle}" Content="/" Click="Button_Click" Grid.Row="4" Grid.Column="3"/>
 
             <!--Linha 5-->
             <Button x:Name="Seven" Style="{StaticResource NumberButtonStyle}" Content="7" Click="Button_Click" Grid.Row="5" Grid.Column="0"/>        
             <Button x:Name="Eight" Style="{StaticResource NumberButtonStyle}" Content="8" Click="Button_Click" Grid.Row="5" Grid.Column="1"/>        
             <Button x:Name="Nine" Style="{StaticResource NumberButtonStyle}" Content="9" Click="Button_Click" Grid.Row="5" Grid.Column="2"/>
-            <Button x:Name="Times" Style="{StaticResource NumberButtonStyle}" Content="x" Click="Button_Click" Grid.Row="5" Grid.Column="3"/>
+            <Button x:Name="Times" Style="{StaticResource NumberButtonStyle}" Content="*" Click="Button_Click" Grid.Row="5" Grid.Column="3"/>
 
             <!--Linha 6-->
             <Button x:Name="Four" Style="{StaticResource NumberButtonStyle}" Content="4" Click="Button_Click" Grid.Row="6" Grid.Column="0"/>        

@@ -1,5 +1,6 @@
 using System;
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
 using System.Data.SqlClient;
 using System.Linq;
 using System.Text;
@@ -41,6 +42,9 @@ namespace Trabalho_final
 
         private void Calculate(object sender, RoutedEventArgs e)
         {
+            var calculator = new Trabalho_final.Controller.CalculatorController();
+            equation = equation + " = " + calculator.Calculate(equation).ToString();
+            Display.Content = equation;
 
         }
 
