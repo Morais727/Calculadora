@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "d:\\TechMS\\Projeto Final\\projfinal\\INF-0999 - Proj Final\\Trabalho-Final.csproj": {}
+    "C:\\Users\\henri\\OneDrive\\Documentos\\Unicamp\\Ciência da Computação\\1º Semestre\\Curso msft\\Aulas\\Trabalho final\\INF-0999-ProjFinal\\Trabalho-Final.csproj": {}
   },
   "projects": {
-    "d:\\TechMS\\Projeto Final\\projfinal\\INF-0999 - Proj Final\\Trabalho-Final.csproj": {
+    "C:\\Users\\henri\\OneDrive\\Documentos\\Unicamp\\Ciência da Computação\\1º Semestre\\Curso msft\\Aulas\\Trabalho final\\INF-0999-ProjFinal\\Trabalho-Final.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "d:\\TechMS\\Projeto Final\\projfinal\\INF-0999 - Proj Final\\Trabalho-Final.csproj",
+        "projectUniqueName": "C:\\Users\\henri\\OneDrive\\Documentos\\Unicamp\\Ciência da Computação\\1º Semestre\\Curso msft\\Aulas\\Trabalho final\\INF-0999-ProjFinal\\Trabalho-Final.csproj",
         "projectName": "Trabalho-Final",
-        "projectPath": "d:\\TechMS\\Projeto Final\\projfinal\\INF-0999 - Proj Final\\Trabalho-Final.csproj",
-        "packagesPath": "C:\\Users\\ninja\\.nuget\\packages\\",
-        "outputPath": "d:\\TechMS\\Projeto Final\\projfinal\\INF-0999 - Proj Final\\obj\\",
+        "projectPath": "C:\\Users\\henri\\OneDrive\\Documentos\\Unicamp\\Ciência da Computação\\1º Semestre\\Curso msft\\Aulas\\Trabalho final\\INF-0999-ProjFinal\\Trabalho-Final.csproj",
+        "packagesPath": "C:\\Users\\henri\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\henri\\OneDrive\\Documentos\\Unicamp\\Ciência da Computação\\1º Semestre\\Curso msft\\Aulas\\Trabalho final\\INF-0999-ProjFinal\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\ninja\\AppData\\Roaming\\NuGet\\NuGet.Config"
+          "C:\\Users\\henri\\AppData\\Roaming\\NuGet\\NuGet.Config"
         ],
         "originalTargetFrameworks": [
           "net7.0-windows"
@@ -62,7 +62,7 @@
               "privateAssets": "none"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.302\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.307\\RuntimeIdentifierGraph.json"
         }
       }
     }

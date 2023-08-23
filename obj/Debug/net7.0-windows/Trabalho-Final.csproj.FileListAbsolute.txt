@@ -104,3 +104,33 @@ D:\TechMS\Projeto Final\projfinal\INF-0999 - Proj Final\obj\Debug\net7.0-windows
 d:\TechMS\Projeto Final\projfinal\INF-0999 - Proj Final\obj\Debug\net7.0-windows\Trabalho-Final.csproj.CopyComplete
 d:\TechMS\Projeto Final\projfinal\INF-0999 - Proj Final\obj\Debug\net7.0-windows\Trabalho-Final.genruntimeconfig.cache
 d:\TechMS\Projeto Final\projfinal\INF-0999 - Proj Final\obj\Debug\net7.0-windows\ref\Trabalho-Final.dll
+C:\Users\henri\OneDrive\Documentos\Unicamp\Ciência da Computação\1º Semestre\Curso msft\Aulas\Trabalho final\INF-0999-ProjFinal\bin\Debug\net7.0-windows\Trabalho-Final.exe
+C:\Users\henri\OneDrive\Documentos\Unicamp\Ciência da Computação\1º Semestre\Curso msft\Aulas\Trabalho final\INF-0999-ProjFinal\bin\Debug\net7.0-windows\Trabalho-Final.deps.json
+C:\Users\henri\OneDrive\Documentos\Unicamp\Ciência da Computação\1º Semestre\Curso msft\Aulas\Trabalho final\INF-0999-ProjFinal\bin\Debug\net7.0-windows\Trabalho-Final.runtimeconfig.json
+C:\Users\henri\OneDrive\Documentos\Unicamp\Ciência da Computação\1º Semestre\Curso msft\Aulas\Trabalho final\INF-0999-ProjFinal\bin\Debug\net7.0-windows\Trabalho-Final.dll
+C:\Users\henri\OneDrive\Documentos\Unicamp\Ciência da Computação\1º Semestre\Curso msft\Aulas\Trabalho final\INF-0999-ProjFinal\bin\Debug\net7.0-windows\Trabalho-Final.pdb
+C:\Users\henri\OneDrive\Documentos\Unicamp\Ciência da Computação\1º Semestre\Curso msft\Aulas\Trabalho final\INF-0999-ProjFinal\bin\Debug\net7.0-windows\System.Data.SqlClient.dll
+C:\Users\henri\OneDrive\Documentos\Unicamp\Ciência da Computação\1º Semestre\Curso msft\Aulas\Trabalho final\INF-0999-ProjFinal\bin\Debug\net7.0-windows\runtimes\win-arm64\native\sni.dll
+C:\Users\henri\OneDrive\Documentos\Unicamp\Ciência da Computação\1º Semestre\Curso msft\Aulas\Trabalho final\INF-0999-ProjFinal\bin\Debug\net7.0-windows\runtimes\win-x64\native\sni.dll
+C:\Users\henri\OneDrive\Documentos\Unicamp\Ciência da Computação\1º Semestre\Curso msft\Aulas\Trabalho final\INF-0999-ProjFinal\bin\Debug\net7.0-windows\runtimes\win-x86\native\sni.dll
+C:\Users\henri\OneDrive\Documentos\Unicamp\Ciência da Computação\1º Semestre\Curso msft\Aulas\Trabalho final\INF-0999-ProjFinal\bin\Debug\net7.0-windows\runtimes\unix\lib\netcoreapp2.1\System.Data.SqlClient.dll
+C:\Users\henri\OneDrive\Documentos\Unicamp\Ciência da Computação\1º Semestre\Curso msft\Aulas\Trabalho final\INF-0999-ProjFinal\bin\Debug\net7.0-windows\runtimes\win\lib\netcoreapp2.1\System.Data.SqlClient.dll
+C:\Users\henri\OneDrive\Documentos\Unicamp\Ciência da Computação\1º Semestre\Curso msft\Aulas\Trabalho final\INF-0999-ProjFinal\obj\Debug\net7.0-windows\Trabalho-Final.csproj.AssemblyReference.cache
+C:\Users\henri\OneDrive\Documentos\Unicamp\Ciência da Computação\1º Semestre\Curso msft\Aulas\Trabalho final\INF-0999-ProjFinal\obj\Debug\net7.0-windows\MainWindow.g.cs
+C:\Users\henri\OneDrive\Documentos\Unicamp\Ciência da Computação\1º Semestre\Curso msft\Aulas\Trabalho final\INF-0999-ProjFinal\obj\Debug\net7.0-windows\Views\MainView.g.cs
+C:\Users\henri\OneDrive\Documentos\Unicamp\Ciência da Computação\1º Semestre\Curso msft\Aulas\Trabalho final\INF-0999-ProjFinal\obj\Debug\net7.0-windows\App.g.cs
+C:\Users\henri\OneDrive\Documentos\Unicamp\Ciência da Computação\1º Semestre\Curso msft\Aulas\Trabalho final\INF-0999-ProjFinal\obj\Debug\net7.0-windows\Trabalho-Final_MarkupCompile.cache
+C:\Users\henri\OneDrive\Documentos\Unicamp\Ciência da Computação\1º Semestre\Curso msft\Aulas\Trabalho final\INF-0999-ProjFinal\obj\Debug\net7.0-windows\Trabalho-Final_MarkupCompile.lref
+C:\Users\henri\OneDrive\Documentos\Unicamp\Ciência da Computação\1º Semestre\Curso msft\Aulas\Trabalho final\INF-0999-ProjFinal\obj\Debug\net7.0-windows\MainWindow.baml
+C:\Users\henri\OneDrive\Documentos\Unicamp\Ciência da Computação\1º Semestre\Curso msft\Aulas\Trabalho final\INF-0999-ProjFinal\obj\Debug\net7.0-windows\Views\MainView.baml
+C:\Users\henri\OneDrive\Documentos\Unicamp\Ciência da Computação\1º Semestre\Curso msft\Aulas\Trabalho final\INF-0999-ProjFinal\obj\Debug\net7.0-windows\Trabalho-Final.g.resources
+C:\Users\henri\OneDrive\Documentos\Unicamp\Ciência da Computação\1º Semestre\Curso msft\Aulas\Trabalho final\INF-0999-ProjFinal\obj\Debug\net7.0-windows\Trabalho-Final.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\henri\OneDrive\Documentos\Unicamp\Ciência da Computação\1º Semestre\Curso msft\Aulas\Trabalho final\INF-0999-ProjFinal\obj\Debug\net7.0-windows\Trabalho-Final.AssemblyInfoInputs.cache
+C:\Users\henri\OneDrive\Documentos\Unicamp\Ciência da Computação\1º Semestre\Curso msft\Aulas\Trabalho final\INF-0999-ProjFinal\obj\Debug\net7.0-windows\Trabalho-Final.AssemblyInfo.cs
+C:\Users\henri\OneDrive\Documentos\Unicamp\Ciência da Computação\1º Semestre\Curso msft\Aulas\Trabalho final\INF-0999-ProjFinal\obj\Debug\net7.0-windows\Trabalho-Final.csproj.CoreCompileInputs.cache
+C:\Users\henri\OneDrive\Documentos\Unicamp\Ciência da Computação\1º Semestre\Curso msft\Aulas\Trabalho final\INF-0999-ProjFinal\obj\Debug\net7.0-windows\Trabalho-Final.csproj.CopyComplete
+C:\Users\henri\OneDrive\Documentos\Unicamp\Ciência da Computação\1º Semestre\Curso msft\Aulas\Trabalho final\INF-0999-ProjFinal\obj\Debug\net7.0-windows\Trabalho-Final.dll
+C:\Users\henri\OneDrive\Documentos\Unicamp\Ciência da Computação\1º Semestre\Curso msft\Aulas\Trabalho final\INF-0999-ProjFinal\obj\Debug\net7.0-windows\refint\Trabalho-Final.dll
+C:\Users\henri\OneDrive\Documentos\Unicamp\Ciência da Computação\1º Semestre\Curso msft\Aulas\Trabalho final\INF-0999-ProjFinal\obj\Debug\net7.0-windows\Trabalho-Final.pdb
+C:\Users\henri\OneDrive\Documentos\Unicamp\Ciência da Computação\1º Semestre\Curso msft\Aulas\Trabalho final\INF-0999-ProjFinal\obj\Debug\net7.0-windows\Trabalho-Final.genruntimeconfig.cache
+C:\Users\henri\OneDrive\Documentos\Unicamp\Ciência da Computação\1º Semestre\Curso msft\Aulas\Trabalho final\INF-0999-ProjFinal\obj\Debug\net7.0-windows\ref\Trabalho-Final.dll

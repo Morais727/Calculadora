@@ -6,7 +6,7 @@
         xmlns:sys="clr-namespace:System;assembly=mscorlib"
         xmlns:local="clr-namespace:Trabalho_Final"
         mc:Ignorable="d"
-        Title="Calculadora" Height="562" Width="680" ResizeMode="NoResize" WindowStartupLocation="CenterScreen" PreviewKeyDown="Window_KeyDownPreview"> 
+        Title="Calculadora" Height="614" Width="680" ResizeMode="NoResize" WindowStartupLocation="CenterScreen" PreviewKeyDown="Window_KeyDownPreview"> 
 
     <!--Definindo um template para os botões-->
     <Window.Resources>
@@ -85,6 +85,7 @@
                 <RowDefinition Height="52"/>
                 <RowDefinition Height="52"/>
                 <RowDefinition Height="52"/>
+                <RowDefinition Height="52"/>
             </Grid.RowDefinitions>
             <Grid.ColumnDefinitions>
                 <ColumnDefinition Width="97"/>
@@ -129,28 +130,34 @@
             <Button x:Name="Division" Style="{StaticResource NumberButtonStyle}" Content="/" Click="Button_Click" Grid.Row="4" Grid.Column="3"/>
 
             <!--Linha 5-->
-            <Button x:Name="Seven" Style="{StaticResource NumberButtonStyle}" Content="7" Click="Button_Click" Grid.Row="5" Grid.Column="0"/>        
-            <Button x:Name="Eight" Style="{StaticResource NumberButtonStyle}" Content="8" Click="Button_Click" Grid.Row="5" Grid.Column="1"/>        
-            <Button x:Name="Nine" Style="{StaticResource NumberButtonStyle}" Content="9" Click="Button_Click" Grid.Row="5" Grid.Column="2"/>
-            <Button x:Name="Times" Style="{StaticResource NumberButtonStyle}" Content="*" Click="Button_Click" Grid.Row="5" Grid.Column="3"/>
+            <Button x:Name="Epx" Style="{StaticResource NumberButtonStyle}" Content="exp" Click="Button_Click" Grid.Row="5" Grid.Column="0"/>        
+            <Button x:Name="Mod" Style="{StaticResource NumberButtonStyle}" Content="mod" Click="Button_Click" Grid.Row="5" Grid.Column="1"/>
+            <Button x:Name="Sqrt" Style="{StaticResource NumberButtonStyle}" Content="√" Click="Button_Click" Grid.Row="5" Grid.Column="2"/>
+            <Button x:Name="Pctg" Style="{StaticResource NumberButtonStyle}" Content="%" Click="Button_Click" Grid.Row="5" Grid.Column="3"/>
 
             <!--Linha 6-->
-            <Button x:Name="Four" Style="{StaticResource NumberButtonStyle}" Content="4" Click="Button_Click" Grid.Row="6" Grid.Column="0"/>        
-            <Button x:Name="Five" Style="{StaticResource NumberButtonStyle}" Content="5" Click="Button_Click" Grid.Row="6" Grid.Column="1"/>        
-            <Button x:Name="Six" Style="{StaticResource NumberButtonStyle}" Content="6" Click="Button_Click" Grid.Row="6" Grid.Column="2"/>
-            <Button x:Name="Minus" Style="{StaticResource NumberButtonStyle}" Content="-" Click="Button_Click" Grid.Row="6" Grid.Column="3"/>
-            
-            <!--Linha 7-->
-            <Button x:Name="One" Style="{StaticResource NumberButtonStyle}" Content="1" Click="Button_Click" Grid.Row="7" Grid.Column="0"/>        
-            <Button x:Name="Two" Style="{StaticResource NumberButtonStyle}" Content="2" Click="Button_Click" Grid.Row="7" Grid.Column="1"/>        
-            <Button x:Name="Three" Style="{StaticResource NumberButtonStyle}" Content="3" Click="Button_Click" Grid.Row="7" Grid.Column="2"/>
-            <Button x:Name="Plus" Style="{StaticResource NumberButtonStyle}" Content="+" Click="Button_Click" Grid.Row="7" Grid.Column="3"/>
+            <Button x:Name="Seven" Style="{StaticResource NumberButtonStyle}" Content="7" Click="Button_Click" Grid.Row="6" Grid.Column="0"/>        
+            <Button x:Name="Eight" Style="{StaticResource NumberButtonStyle}" Content="8" Click="Button_Click" Grid.Row="6" Grid.Column="1"/>        
+            <Button x:Name="Nine" Style="{StaticResource NumberButtonStyle}" Content="9" Click="Button_Click" Grid.Row="6" Grid.Column="2"/>
+            <Button x:Name="Times" Style="{StaticResource NumberButtonStyle}" Content="*" Click="Button_Click" Grid.Row="6" Grid.Column="3"/>
 
+            <!--Linha 7-->
+            <Button x:Name="Four" Style="{StaticResource NumberButtonStyle}" Content="4" Click="Button_Click" Grid.Row="7" Grid.Column="0"/>        
+            <Button x:Name="Five" Style="{StaticResource NumberButtonStyle}" Content="5" Click="Button_Click" Grid.Row="7" Grid.Column="1"/>        
+            <Button x:Name="Six" Style="{StaticResource NumberButtonStyle}" Content="6" Click="Button_Click" Grid.Row="7" Grid.Column="2"/>
+            <Button x:Name="Minus" Style="{StaticResource NumberButtonStyle}" Content="-" Click="Button_Click" Grid.Row="7" Grid.Column="3"/>
+            
             <!--Linha 8-->
-            <Button x:Name="Negate" Style="{StaticResource NumberButtonStyle}" Content="+/-" Click="Negation" Grid.Row="8" Grid.Column="0"/>        
-            <Button x:Name="Zero" Style="{StaticResource NumberButtonStyle}" Content="0" Click="Button_Click" Grid.Row="8" Grid.Column="1"/>
-            <Button x:Name="Comma" Style="{StaticResource NumberButtonStyle}" Content="," Click="AddComma" Grid.Row="8" Grid.Column="2"/>
-            <Button x:Name="Equals" Style="{StaticResource NumberButtonStyle}" Content="=" Click="Calculate" Grid.Row="8" Grid.Column="3"/>     
+            <Button x:Name="One" Style="{StaticResource NumberButtonStyle}" Content="1" Click="Button_Click" Grid.Row="8" Grid.Column="0"/>        
+            <Button x:Name="Two" Style="{StaticResource NumberButtonStyle}" Content="2" Click="Button_Click" Grid.Row="8" Grid.Column="1"/>        
+            <Button x:Name="Three" Style="{StaticResource NumberButtonStyle}" Content="3" Click="Button_Click" Grid.Row="8" Grid.Column="2"/>
+            <Button x:Name="Plus" Style="{StaticResource NumberButtonStyle}" Content="+" Click="Button_Click" Grid.Row="8" Grid.Column="3"/>
+
+            <!--Linha 9-->
+            <Button x:Name="Negate" Style="{StaticResource NumberButtonStyle}" Content="+/-" Click="Negation" Grid.Row="9" Grid.Column="0"/>        
+            <Button x:Name="Zero" Style="{StaticResource NumberButtonStyle}" Content="0" Click="Button_Click" Grid.Row="9" Grid.Column="1"/>
+            <Button x:Name="Comma" Style="{StaticResource NumberButtonStyle}" Content="," Click="AddComma" Grid.Row="9" Grid.Column="2"/>
+            <Button x:Name="Equals" Style="{StaticResource NumberButtonStyle}" Content="=" Click="Calculate" Grid.Row="9" Grid.Column="3"/>     
         </Grid>
 
         <!--Coluna 1: Memória e histórico-->
