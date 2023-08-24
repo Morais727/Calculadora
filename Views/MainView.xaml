@@ -6,7 +6,7 @@
         xmlns:sys="clr-namespace:System;assembly=mscorlib"
         xmlns:local="clr-namespace:Trabalho_Final"
         mc:Ignorable="d"
-        Title="Calculadora" Height="614" Width="680" ResizeMode="NoResize" WindowStartupLocation="CenterScreen" PreviewKeyDown="Window_KeyDownPreview"> 
+        Title="Calculadora" Loaded="show_history" Height="614" Width="680" ResizeMode="NoResize" WindowStartupLocation="CenterScreen" PreviewKeyDown="Window_KeyDownPreview"> 
 
     <!--Definindo um template para os botões-->
     <Window.Resources>
@@ -169,6 +169,7 @@
             </Grid.RowDefinitions>
 
             <TextBlock Grid.Row="0" Text="Histórico" FontSize="18" FontWeight="Bold" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="5,5,0,0"/>
+            <TextBlock Grid.Row="0" Name="History" Text="---" FontSize="16" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="5,5,0,0"/>
             <Rectangle Grid.Row="0" Height="1" Fill="Black" VerticalAlignment="Bottom"/>
             <TextBlock Grid.Row="1" Text="Memória" FontSize="18" FontWeight="Bold" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="5,5,0,0"/>
         </Grid>

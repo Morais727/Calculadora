@@ -45,7 +45,21 @@ namespace Trabalho_final
             var calculator = new Trabalho_final.Controller.CalculatorController();
             equation = equation + " = " + calculator.Calculate(equation).ToString();
             Display.Content = equation;
+            //PERSISTE DADOS SQL SERVER
+            int position = equation.IndexOf("=") + 1;
+            string resultado_equation = equation.Substring(position).Trim();
+            string equation_body = equation.Substring(0, position).Trim();
+            conexao.getDBConnection("insert into historico_calc(dt_atualizacao, equacao, resultado) VALUES(SYSDATETIME(), '" + equation_body + "', '" + resultado_equation + "');", "inserir");
+            History.Text = string.Empty;
+            conexao.getDBConnection("SELECT TOP 5 format(dt_atualizacao,'dd/MM/yyyy HH:mm') AS data_atu, equacao, resultado FROM historico_calc ORDER BY dt_atualizacao desc;", "selecionar");
+            History.Text = conexao.equacao_history;
 
+        }
+
+        private void show_history(object sender, RoutedEventArgs e)
+        {
+            conexao.getDBConnection("SELECT TOP 5 format(dt_atualizacao,'dd/MM/yyyy HH:mm') AS data_atu, equacao, resultado FROM historico_calc ORDER BY dt_atualizacao desc;", "selecionar");
+            History.Text = conexao.equacao_history;
         }
 
         private void Square(object sender, RoutedEventArgs e)
