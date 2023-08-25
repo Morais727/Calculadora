@@ -4,7 +4,7 @@ namespace Trabalho_final.Controller
 {
     public class Number
     {
-        private bool IsInteger { get; set; }
+        internal bool IsInteger { get; set; }
         private double DoubleValue { get; set; }
         private int IntValue { get; set; }
 
@@ -53,17 +53,18 @@ namespace Trabalho_final.Controller
                 IsInteger = false
             };
         }
-
+        
         public static Number Pow(Number a, Number b)
         {
             double result = Math.Pow(a.AsDouble(), b.AsDouble());
+
             if (a.IsInteger && b.IsInteger)
             {
-                return FromValue((int)result);
+                return Number.FromValue((int)result);
             }
-            return FromValue(result);
-        }
 
+            return Number.FromValue(result);
+        }
 
         public static Number operator +(Number a, Number b)
         {

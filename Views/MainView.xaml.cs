@@ -32,6 +32,7 @@ namespace Trabalho_final
         {
             InitializeComponent();
         }
+        private bool isEnteringExponent = false;
 
         private void Button_Click(object sender, RoutedEventArgs e)
         {
@@ -39,6 +40,11 @@ namespace Trabalho_final
             if (equation == "-" && !char.IsDigit(button.Content.ToString()[0]))
                 {
                     equation = "0" + equation;
+                }
+            if (isEnteringExponent)
+                {
+                    equation += "^";
+                    isEnteringExponent = false;
                 }
             equation += button.Content;
             Display.Content = equation;
@@ -86,8 +92,11 @@ namespace Trabalho_final
 
         private void Square(object sender, RoutedEventArgs e)
         {
-            equation += "^2"; 
-            Display.Content = equation;
+            if (!string.IsNullOrEmpty(equation))
+            {
+                equation += "^2"; 
+                Display.Content = equation;
+            }
         }
 
 
@@ -210,8 +219,9 @@ namespace Trabalho_final
                     case Key.Divide: // /
                         equation += "/";
                         break;
-                    case Key.D6: // ^
-                        equation += "^";
+                    case Key.Oem3: // ^
+                        isEnteringExponent = true;
+                        equation += "^";   
                         break;
                     case Key.Enter: // =
                         equation += "=";
