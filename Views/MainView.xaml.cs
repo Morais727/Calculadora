@@ -49,16 +49,16 @@ namespace Trabalho_final
             int position = equation.IndexOf("=") + 1;
             string resultado_equation = equation.Substring(position).Trim();
             string equation_body = equation.Substring(0, position).Trim();
-            conexao.getDBConnection("insert into historico_calc(dt_atualizacao, equacao, resultado) VALUES(SYSDATETIME(), '" + equation_body + "', '" + resultado_equation + "');", "inserir");
-            conexao.equacao_history = "";
-            conexao.getDBConnection("SELECT TOP 5 format(dt_atualizacao,'dd/MM/yyyy HH:mm') AS data_atu, equacao, resultado FROM historico_calc ORDER BY dt_atualizacao desc;", "selecionar");
+           // conexao.getDBConnection("insert into historico_calc(dt_atualizacao, equacao, resultado) VALUES(SYSDATETIME(), '" + equation_body + "', '" + resultado_equation + "');", "inserir");
+          //  conexao.equacao_history = "";
+          //  conexao.getDBConnection("SELECT TOP 5 format(dt_atualizacao,'dd/MM/yyyy HH:mm') AS data_atu, equacao, resultado FROM historico_calc ORDER BY dt_atualizacao desc;", "selecionar");
             History.Text = conexao.equacao_history;
 
         }
 
         private void show_history(object sender, RoutedEventArgs e)
         {
-            conexao.getDBConnection("SELECT TOP 5 format(dt_atualizacao,'dd/MM/yyyy HH:mm') AS data_atu, equacao, resultado FROM historico_calc ORDER BY dt_atualizacao desc;", "selecionar");
+           // conexao.getDBConnection("SELECT TOP 5 format(dt_atualizacao,'dd/MM/yyyy HH:mm') AS data_atu, equacao, resultado FROM historico_calc ORDER BY dt_atualizacao desc;", "selecionar");
             History.Text = conexao.equacao_history;
         }
 
@@ -69,8 +69,21 @@ namespace Trabalho_final
 
         private void Negation(object sender, RoutedEventArgs e)
         {
-            
+            if (!string.IsNullOrEmpty(equation))
+            {
+                if (equation.StartsWith("-"))
+                {
+                    equation = equation.Substring(1); // Remove o sinal de menos
+                }
+                else
+                {
+                    equation = "-" + equation; // Adiciona o sinal de menos
+                }
+                
+                Display.Content = equation;
+            }
         }
+
         private void AddComma(object sender, RoutedEventArgs e)
         {
             
@@ -174,7 +187,7 @@ namespace Trabalho_final
                 case Key.Enter: // =
                     equation += "=";
                     //EXEMPLO USO CONEXAO SQL SERVER -- WILL
-                    conexao.getDBConnection("insert into historico_calc(dt_atualizacao, equacao, resultado) VALUES(SYSDATETIME(), '" + equation + "', '---');", "inserir");
+                    //conexao.getDBConnection("insert into historico_calc(dt_atualizacao, equacao, resultado) VALUES(SYSDATETIME(), '" + equation + "', '---');", "inserir");
                     break;
 
                 // Lógica para outros
