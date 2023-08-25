@@ -8,6 +8,7 @@ namespace Trabalho_final.Controller
             {
                { '*', 3 },
                { '/', 3 },
+               { '^', 3 },
                { '+', 2 },
                { '-', 2 },
                { '(', 1 },

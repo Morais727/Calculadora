@@ -36,44 +36,60 @@ namespace Trabalho_final
         private void Button_Click(object sender, RoutedEventArgs e)
         {
             Button button = (Button)sender;
+            if (equation == "-" && !char.IsDigit(button.Content.ToString()[0]))
+                {
+                    equation = "0" + equation;
+                }
             equation += button.Content;
             Display.Content = equation;
         }
+
 
         private void Calculate(object sender, RoutedEventArgs e)
         {
             try
             {
+                if (!string.IsNullOrEmpty(equation) && equation[0] == '-')
+                {
+                    equation = "0" + equation;
+                }
+
                 var calculator = new Trabalho_final.Controller.CalculatorController();
-                equation = equation + " = " + calculator.Calculate(equation).ToString();
+                var result = calculator.Calculate(equation);
+
+                equation = equation + " = " + result.ToString();
                 Display.Content = equation;
-                //PERSISTE DADOS SQL SERVER
+
+                // PERSISTE DADOS SQL SERVER
                 int position = equation.IndexOf("=") + 1;
                 string resultado_equation = equation.Substring(position).Trim();
                 string equation_body = equation.Substring(0, position).Trim();
-                
-            // conexao.getDBConnection("insert into historico_calc(dt_atualizacao, equacao, resultado) VALUES(SYSDATETIME(), '" + equation_body + "', '" + resultado_equation + "');", "inserir");
-            //  conexao.equacao_history = "";
-            //  conexao.getDBConnection("SELECT TOP 5 format(dt_atualizacao,'dd/MM/yyyy HH:mm') AS data_atu, equacao, resultado FROM historico_calc ORDER BY dt_atualizacao desc;", "selecionar");
+
+                conexao.getDBConnection("insert into historico_calc(dt_atualizacao, equacao, resultado) VALUES(SYSDATETIME(), '" + equation_body + "', '" + resultado_equation + "');", "inserir");
+                conexao.equacao_history = "";
+                conexao.getDBConnection("SELECT TOP 5 format(dt_atualizacao,'dd/MM/yyyy HH:mm') AS data_atu, equacao, resultado FROM historico_calc ORDER BY dt_atualizacao desc;", "selecionar");
                 History.Text = conexao.equacao_history;
             }
             catch (Exception ex)
             {
                 Console.WriteLine("Error in Calculate: " + ex.ToString());
+               
             }
-
         }
+
 
         private void show_history(object sender, RoutedEventArgs e)
         {
-           // conexao.getDBConnection("SELECT TOP 5 format(dt_atualizacao,'dd/MM/yyyy HH:mm') AS data_atu, equacao, resultado FROM historico_calc ORDER BY dt_atualizacao desc;", "selecionar");
+            conexao.getDBConnection("SELECT TOP 5 format(dt_atualizacao,'dd/MM/yyyy HH:mm') AS data_atu, equacao, resultado FROM historico_calc ORDER BY dt_atualizacao desc;", "selecionar");
             History.Text = conexao.equacao_history;
         }
 
         private void Square(object sender, RoutedEventArgs e)
         {
-            
+            equation += "^2"; 
+            Display.Content = equation;
         }
+
 
         private void Negation(object sender, RoutedEventArgs e)
         {
@@ -81,11 +97,11 @@ namespace Trabalho_final
             {
                 if (equation.StartsWith("-"))
                 {
-                    equation = equation.Substring(1); // Remove o sinal de menos
+                    equation = equation.Substring(1); 
                 }
                 else
                 {
-                    equation = "-" + equation; // Adiciona o sinal de menos
+                    equation = "-" + equation; 
                 }
                 
                 Display.Content = equation;
@@ -194,10 +210,13 @@ namespace Trabalho_final
                     case Key.Divide: // /
                         equation += "/";
                         break;
+                    case Key.D6: // ^
+                        equation += "^";
+                        break;
                     case Key.Enter: // =
                         equation += "=";
                         //EXEMPLO USO CONEXAO SQL SERVER -- WILL
-                        //conexao.getDBConnection("insert into historico_calc(dt_atualizacao, equacao, resultado) VALUES(SYSDATETIME(), '" + equation + "', '---');", "inserir");
+                        conexao.getDBConnection("insert into historico_calc(dt_atualizacao, equacao, resultado) VALUES(SYSDATETIME(), '" + equation + "', '---');", "inserir");
                         break;
 
                     // Lógica para outros
@@ -223,9 +242,6 @@ namespace Trabalho_final
                     case Key.L: // log
                         equation += "log";
                         break;
-                    case Key.Oem8: // ^
-                        equation += "power";
-                        break;
                     case Key.OemComma: // ,
                         equation += ",";
                         break;
@@ -238,10 +254,6 @@ namespace Trabalho_final
                     case Key.D0: // "("
                         equation += ")";
                         break;
-                    case Key.Up: // ^
-                        equation += "^";
-                        break;
-                    
                     default:
                         break;
                 }

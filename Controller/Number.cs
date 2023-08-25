@@ -1,3 +1,5 @@
+using System;
+
 namespace Trabalho_final.Controller
 {
     public class Number
@@ -6,7 +8,7 @@ namespace Trabalho_final.Controller
         private double DoubleValue { get; set; }
         private int IntValue { get; set; }
 
-        private double AsDouble()
+        internal double AsDouble()
         {
             if (IsInteger)
             {
@@ -34,7 +36,7 @@ namespace Trabalho_final.Controller
             };
         }
 
-        private static Number FromValue(int value)
+        internal static Number FromValue(int value)
         {
             return new Number
             {
@@ -43,7 +45,7 @@ namespace Trabalho_final.Controller
             };
         }
 
-        private static Number FromValue(double value)
+        internal static Number FromValue(double value)
         {
             return new Number
             {
@@ -51,6 +53,17 @@ namespace Trabalho_final.Controller
                 IsInteger = false
             };
         }
+
+        public static Number Pow(Number a, Number b)
+        {
+            double result = Math.Pow(a.AsDouble(), b.AsDouble());
+            if (a.IsInteger && b.IsInteger)
+            {
+                return FromValue((int)result);
+            }
+            return FromValue(result);
+        }
+
 
         public static Number operator +(Number a, Number b)
         {

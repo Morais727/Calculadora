@@ -85,6 +85,8 @@ namespace Trabalho_final.Controller
                     return a * b;
                 case '/':
                     return a / b;
+                case '^': 
+            return Number.Pow(a, b);         
                 default:
                     throw new InvalidOperationException(op.ToString());
             }

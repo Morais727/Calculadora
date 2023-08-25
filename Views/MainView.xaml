@@ -115,12 +115,8 @@
             <!--Linha 3-->
             <Button x:Name="Sin" Style="{StaticResource NumberButtonStyle}" Content="sin" Click="Button_Click" Grid.Row="3" Grid.Column="0"/>        
             <Button x:Name="Cos" Style="{StaticResource NumberButtonStyle}" Content="cos" Click="Button_Click" Grid.Row="3" Grid.Column="1"/>
-            <Button x:Name="Expo" Style="{StaticResource NumberButtonStyle}" Grid.Row="3" Click="Button_Click" Grid.Column="2">
-                <TextBlock>
-                    <Run Text="x"/>
-                    <Run BaselineAlignment="Superscript" FontSize="15" Text="y"/>
-                </TextBlock>
-            </Button>
+            <Button x:Name="Expo" Style="{StaticResource NumberButtonStyle}" Content="^" Grid.Row="3" Click="Button_Click" Grid.Column="2"/>
+
             <Button x:Name="Log" Style="{StaticResource NumberButtonStyle}" Content="log" Click="Button_Click" Grid.Row="3" Grid.Column="3"/>
 
             <!--Linha 4-->
