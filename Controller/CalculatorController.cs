@@ -86,14 +86,9 @@ namespace Trabalho_final.Controller
                 case '/':
                     return a / b;
                 case '^': 
-                    if (b.IsInteger && b.AsDouble() >= 0)
-                        {
-                            return Number.Pow(a, b);
-                        }
-                        else
-                        {
-                            throw new InvalidOperationException("Exponentiation with negative exponent or non-integer exponent is not supported.");
-                        } 
+                    return Number.Pow(a, b);
+                case '√':
+                    return Number.FromValue(Math.Sqrt(a.AsDouble()));
                 default:
                     throw new InvalidOperationException(op.ToString());
             }

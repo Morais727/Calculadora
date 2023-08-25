@@ -41,11 +41,6 @@ namespace Trabalho_final
                 {
                     equation = "0" + equation;
                 }
-            if (isEnteringExponent)
-                {
-                    equation += "^";
-                    isEnteringExponent = false;
-                }
             equation += button.Content;
             Display.Content = equation;
         }
@@ -58,6 +53,48 @@ namespace Trabalho_final
                 if (!string.IsNullOrEmpty(equation) && equation[0] == '-')
                 {
                     equation = "0" + equation;
+                }
+                
+                
+                int positionroot = equation.IndexOf("√");
+                while (positionroot >= 0)
+                {
+                    string equation_body1 = equation.Substring(positionroot + 1);
+                    
+                    Number n = Number.Create(equation_body1);
+                    
+                    var raizQuadrada = Math.Sqrt(n.AsDouble());
+                    var resultroot = raizQuadrada.ToString();
+                    
+                    equation = equation.Substring(0, positionroot) + resultroot + equation.Substring(positionroot + 1 + equation_body1.Length);
+                    positionroot = equation.IndexOf("√", positionroot + resultroot.Length);
+                }
+
+               
+                int positionexp = equation.IndexOf("^");
+                while (positionexp >= 0)
+                {
+                    // Encontrar a posição do início da base
+                    int baseStart = positionexp - 1;
+                    while (baseStart >= 0 && char.IsDigit(equation[baseStart]))
+                    {
+                        baseStart--;
+                    }
+                    baseStart++;
+
+                    // Extrair a base e o expoente
+                    string equation_base = equation.Substring(baseStart, positionexp - baseStart);
+                    string equation_exponent = equation.Substring(positionexp + 1);
+
+                    Number baseNumber = Number.Create(equation_base);
+                    Number exponentNumber = Number.Create(equation_exponent);
+                    var resultexp = Number.Pow(baseNumber, exponentNumber);
+
+                    // Substituir a base pelo resultado
+                    equation = equation.Substring(0, baseStart) + resultexp + equation.Substring(positionexp + 1 + equation_exponent.Length);
+
+                    // Encontrar a próxima ocorrência de "^"
+                    positionexp = equation.IndexOf("^", baseStart + resultexp.ToString().Length);
                 }
 
                 var calculator = new Trabalho_final.Controller.CalculatorController();
@@ -75,6 +112,7 @@ namespace Trabalho_final
                 conexao.equacao_history = "";
                 conexao.getDBConnection("SELECT TOP 5 format(dt_atualizacao,'dd/MM/yyyy HH:mm') AS data_atu, equacao, resultado FROM historico_calc ORDER BY dt_atualizacao desc;", "selecionar");
                 History.Text = conexao.equacao_history;
+                
             }
             catch (Exception ex)
             {
@@ -222,6 +260,9 @@ namespace Trabalho_final
                     case Key.Oem3: // ^
                         isEnteringExponent = true;
                         equation += "^";   
+                        break;
+                    case Key.R: // r
+                        equation += "√"; 
                         break;
                     case Key.Enter: // =
                         equation += "=";
