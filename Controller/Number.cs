@@ -1,4 +1,5 @@
 using System;
+using System.Globalization;
 
 namespace Trabalho_final.Controller
 {
@@ -24,14 +25,14 @@ namespace Trabalho_final.Controller
             {
                 return new Number
                 {
-                    DoubleValue = double.Parse(s),
+                    DoubleValue = double.Parse(s, CultureInfo.InvariantCulture),
                     IsInteger = false
                 };
             }
 
             return new Number
             {
-                IntValue = int.Parse(s),
+                IntValue = int.Parse(s, CultureInfo.InvariantCulture),
                 IsInteger = true
             };
         }

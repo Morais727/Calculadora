@@ -2,6 +2,7 @@ using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 using System.Data.SqlClient;
+using System.Globalization;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -37,10 +38,11 @@ namespace Trabalho_final
         private void Button_Click(object sender, RoutedEventArgs e)
         {
             Button button = (Button)sender;
-            if (equation == "-" && !char.IsDigit(button.Content.ToString()[0]))
+            /*if (equation == "-" && !char.IsDigit(button.Content.ToString()[0]))
                 {
                     equation = "0" + equation;
                 }
+            */
             equation += button.Content;
             Display.Content = equation;
         }
@@ -50,11 +52,11 @@ namespace Trabalho_final
         {
             try
             {
-                if (!string.IsNullOrEmpty(equation) && equation[0] == '-')
+                /*if (!string.IsNullOrEmpty(equation) && equation[0] == '-')
                 {
                     equation = "0" + equation;
                 }
-                
+                */
                 
                 //int positionroot = equation.IndexOf("√");
                 /*while (positionroot >= 0)

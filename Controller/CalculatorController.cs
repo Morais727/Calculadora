@@ -13,6 +13,8 @@ namespace Trabalho_final.Controller
             _values = new Stack<Number>();
             _operations = new Stack<char>();
             var i = 0;
+            if(expression.First() == '-')
+                _values.Push(Number.Create("0"));
             while (true)
             {
                 var restOfExpression = expression.Substring(i);
@@ -33,6 +35,8 @@ namespace Trabalho_final.Controller
                 {
                     _operations.Push('(');
                     i += tokenLength;
+                    if(restOfExpression.ElementAt(1) == '-' )
+                        _values.Push(Number.Create("0"));
                     continue;
                 }
 
@@ -96,7 +100,7 @@ namespace Trabalho_final.Controller
                 case '^': 
                     return Number.Pow(a, b);
                 case '√':
-                    return Number.FromValue(Math.Sqrt(b.AsDouble()));
+                    return Number.Root(b);
                 default:
                     throw new InvalidOperationException(op.ToString());
             }
