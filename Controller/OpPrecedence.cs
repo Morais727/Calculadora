@@ -6,9 +6,10 @@ namespace Trabalho_final.Controller
     {
         private static readonly IDictionary<char, int> OperationPriority = new Dictionary<char, int>
             {
+               { '√', 4 },
+               { '^', 4 },
                { '*', 3 },
-               { '/', 3 },
-               { '^', 3 },
+               { '/', 3 },               
                { '+', 2 },
                { '-', 2 },
                { '(', 1 },

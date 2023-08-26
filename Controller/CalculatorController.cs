@@ -47,12 +47,16 @@ namespace Trabalho_final.Controller
                     continue;
                 }
 
-                var operation = Lexer.Parse(restOfExpression, @"\+|\-|\*|\/", out tokenLength).FirstOrDefault();
+                var operation = Lexer.Parse(restOfExpression, @"\+|\-|\*|\/|\^|\√", out tokenLength).FirstOrDefault();
                 if (operation != 0)
                 {
                     while (_operations.Count > 0 && OpPrecedence.IsPrecided(operation, _operations.Peek()))
                     {
-                        _values.Push(Calculate(_operations.Pop(), _values.Pop(), _values.Pop()));
+                        if(_operations.Peek() == '√'){
+                            _values.Push(Calculate(_operations.Pop(), _values.Pop(), Number.Create("0")));
+                        }else{
+                            _values.Push(Calculate(_operations.Pop(), _values.Pop(), _values.Pop()));
+                        }
                     }
                     _operations.Push(operation);
                     i += tokenLength;
@@ -61,7 +65,11 @@ namespace Trabalho_final.Controller
 
             while (_operations.Count > 0)
             {
-                _values.Push(Calculate(_operations.Pop(), _values.Pop(), _values.Pop()));
+                if(_operations.Peek() == '√'){
+                    _values.Push(Calculate(_operations.Pop(), _values.Pop(), Number.Create("0")));
+                }else{
+                    _values.Push(Calculate(_operations.Pop(), _values.Pop(), _values.Pop()));
+                }
             }
 
             var result = _values.Pop();
@@ -88,7 +96,7 @@ namespace Trabalho_final.Controller
                 case '^': 
                     return Number.Pow(a, b);
                 case '√':
-                    return Number.FromValue(Math.Sqrt(a.AsDouble()));
+                    return Number.FromValue(Math.Sqrt(b.AsDouble()));
                 default:
                     throw new InvalidOperationException(op.ToString());
             }

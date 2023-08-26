@@ -56,8 +56,8 @@ namespace Trabalho_final
                 }
                 
                 
-                int positionroot = equation.IndexOf("√");
-                while (positionroot >= 0)
+                //int positionroot = equation.IndexOf("√");
+                /*while (positionroot >= 0)
                 {
                     string equation_body1 = equation.Substring(positionroot + 1);
                     
@@ -69,10 +69,11 @@ namespace Trabalho_final
                     equation = equation.Substring(0, positionroot) + resultroot + equation.Substring(positionroot + 1 + equation_body1.Length);
                     positionroot = equation.IndexOf("√", positionroot + resultroot.Length);
                 }
+                */
 
                
-                int positionexp = equation.IndexOf("^");
-                while (positionexp >= 0)
+                //int positionexp = equation.IndexOf("^");
+                /*while (positionexp >= 0)
                 {
                     // Encontrar a posição do início da base
                     int baseStart = positionexp - 1;
@@ -96,6 +97,7 @@ namespace Trabalho_final
                     // Encontrar a próxima ocorrência de "^"
                     positionexp = equation.IndexOf("^", baseStart + resultexp.ToString().Length);
                 }
+                */
 
                 var calculator = new Trabalho_final.Controller.CalculatorController();
                 var result = calculator.Calculate(equation);
@@ -108,10 +110,10 @@ namespace Trabalho_final
                 string resultado_equation = equation.Substring(position).Trim();
                 string equation_body = equation.Substring(0, position).Trim();
 
-                conexao.getDBConnection("insert into historico_calc(dt_atualizacao, equacao, resultado) VALUES(SYSDATETIME(), '" + equation_body + "', '" + resultado_equation + "');", "inserir");
-                conexao.equacao_history = "";
-                conexao.getDBConnection("SELECT TOP 5 format(dt_atualizacao,'dd/MM/yyyy HH:mm') AS data_atu, equacao, resultado FROM historico_calc ORDER BY dt_atualizacao desc;", "selecionar");
-                History.Text = conexao.equacao_history;
+                //conexao.getDBConnection("insert into historico_calc(dt_atualizacao, equacao, resultado) VALUES(SYSDATETIME(), '" + equation_body + "', '" + resultado_equation + "');", "inserir");
+                //conexao.equacao_history = "";
+                //conexao.getDBConnection("SELECT TOP 5 format(dt_atualizacao,'dd/MM/yyyy HH:mm') AS data_atu, equacao, resultado FROM historico_calc ORDER BY dt_atualizacao desc;", "selecionar");
+                //History.Text = conexao.equacao_history;
                 
             }
             catch (Exception ex)
@@ -124,8 +126,8 @@ namespace Trabalho_final
 
         private void show_history(object sender, RoutedEventArgs e)
         {
-            conexao.getDBConnection("SELECT TOP 5 format(dt_atualizacao,'dd/MM/yyyy HH:mm') AS data_atu, equacao, resultado FROM historico_calc ORDER BY dt_atualizacao desc;", "selecionar");
-            History.Text = conexao.equacao_history;
+            //conexao.getDBConnection("SELECT TOP 5 format(dt_atualizacao,'dd/MM/yyyy HH:mm') AS data_atu, equacao, resultado FROM historico_calc ORDER BY dt_atualizacao desc;", "selecionar");
+            //History.Text = conexao.equacao_history;
         }
 
         private void Square(object sender, RoutedEventArgs e)
@@ -267,7 +269,7 @@ namespace Trabalho_final
                     case Key.Enter: // =
                         equation += "=";
                         //EXEMPLO USO CONEXAO SQL SERVER -- WILL
-                        conexao.getDBConnection("insert into historico_calc(dt_atualizacao, equacao, resultado) VALUES(SYSDATETIME(), '" + equation + "', '---');", "inserir");
+                        //conexao.getDBConnection("insert into historico_calc(dt_atualizacao, equacao, resultado) VALUES(SYSDATETIME(), '" + equation + "', '---');", "inserir");
                         break;
 
                     // Lógica para outros

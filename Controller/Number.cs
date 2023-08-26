@@ -54,6 +54,18 @@ namespace Trabalho_final.Controller
             };
         }
         
+        public static Number Root(Number b)
+        {
+            double result = Math.Sqrt(b.AsDouble());
+
+            if (b.IsInteger)
+            {
+                return Number.FromValue((int)result);
+            }
+
+            return Number.FromValue(result);
+        }
+
         public static Number Pow(Number a, Number b)
         {
             double result = Math.Pow(a.AsDouble(), b.AsDouble());
