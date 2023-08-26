@@ -38,13 +38,9 @@
         "net7.0-windows7.0": {
           "targetAlias": "net7.0-windows",
           "dependencies": {
-            "Microsoft.Data.SqlClient": {
+            "Npgsql": {
               "target": "Package",
-              "version": "[5.1.1, )"
-            },
-            "System.Data.SqlClient": {
-              "target": "Package",
-              "version": "[4.8.5, )"
+              "version": "[7.0.4, )"
             }
           },
           "imports": [

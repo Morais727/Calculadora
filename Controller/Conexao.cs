@@ -6,6 +6,7 @@ using System.Data;
 using System.Data.SqlClient;
 using System.Windows;
 using System.Configuration;
+using Npgsql;
 
 namespace Trabalho_final.Controller
 {
@@ -15,8 +16,8 @@ namespace Trabalho_final.Controller
         public string equacao_history { get; set; }
 
         //Dados SQL Server do Azure
-        string Server = "inf-0999-server.database.windows.net";
-        string Port = "1433";
+        string Server = "inf-0999-server.postgres.database.azure.com";
+        string Port = "5432";
         string Username = "Administrador";
         string Password = "inF0999un1c@mp";
         string Database = "PROJ-FINAL-CALC-INF-0999";
@@ -28,18 +29,18 @@ namespace Trabalho_final.Controller
             {
                 // String de Conexao
                 string connectionString =
-                    "Data Source=" + Server + 
-                    ", " + Port + 
-                    ";Initial Catalog=" + Database + 
-                    ";User ID =" + Username + 
+                    "Server=" + Server + 
+                    ";Username=" + Username + 
+                    ";Database=" + Database + 
+                    ";Port=" + Port + 
                     ";Password=" + Password + 
-                    ";Connect Timeout=" + Timeout;
+                    ";SSLMode=Prefer";
 
-                SqlConnection conn = new SqlConnection(connectionString);
+                NpgsqlConnection conn = new NpgsqlConnection(connectionString);
 
                 conn.Open();
 
-                SqlCommand cmd = new SqlCommand(query, conn);
+                NpgsqlCommand cmd = new NpgsqlCommand(query, conn);
                 
                 if (comando == "inserir")
                 {
@@ -48,11 +49,11 @@ namespace Trabalho_final.Controller
 
                 if (comando == "selecionar")
                 {
-                    SqlDataReader cmd_select = cmd.ExecuteReader();
+                    NpgsqlDataReader cmd_select = cmd.ExecuteReader();
                     while (cmd_select.Read())
                     {
                         //MessageBox.Show((string)cmd_select["equacao"]);
-                        equacao_history = equacao_history + "\n" + (string)cmd_select["data_atu"] + " - " + (string)cmd_select["equacao"] + " " + cmd_select["resultado"];
+                        equacao_history = equacao_history + "\n" + cmd_select["data_atu"].ToString() + " - " + (string)cmd_select["equacao"] + " " + cmd_select["resultado"];
                     }
                 }
 
