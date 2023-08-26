@@ -1,23 +1,23 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\morai\\OneDrive\\Documentos\\extensao\\INF-0999 - Proj Final\\Trabalho-Final.csproj": {}
+    "d:\\Curso Unicamp\\Tecnologias Microsoft\\Projeto Final\\Repo\\INF-0999 - Proj Final\\Trabalho-Final.csproj": {}
   },
   "projects": {
-    "C:\\Users\\morai\\OneDrive\\Documentos\\extensao\\INF-0999 - Proj Final\\Trabalho-Final.csproj": {
+    "d:\\Curso Unicamp\\Tecnologias Microsoft\\Projeto Final\\Repo\\INF-0999 - Proj Final\\Trabalho-Final.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\morai\\OneDrive\\Documentos\\extensao\\INF-0999 - Proj Final\\Trabalho-Final.csproj",
+        "projectUniqueName": "d:\\Curso Unicamp\\Tecnologias Microsoft\\Projeto Final\\Repo\\INF-0999 - Proj Final\\Trabalho-Final.csproj",
         "projectName": "Trabalho-Final",
-        "projectPath": "C:\\Users\\morai\\OneDrive\\Documentos\\extensao\\INF-0999 - Proj Final\\Trabalho-Final.csproj",
-        "packagesPath": "C:\\Users\\morai\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\morai\\OneDrive\\Documentos\\extensao\\INF-0999 - Proj Final\\obj\\",
+        "projectPath": "d:\\Curso Unicamp\\Tecnologias Microsoft\\Projeto Final\\Repo\\INF-0999 - Proj Final\\Trabalho-Final.csproj",
+        "packagesPath": "C:\\Users\\Will\\.nuget\\packages\\",
+        "outputPath": "d:\\Curso Unicamp\\Tecnologias Microsoft\\Projeto Final\\Repo\\INF-0999 - Proj Final\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
         ],
         "configFilePaths": [
-          "C:\\Users\\morai\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\Will\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
@@ -26,7 +26,6 @@
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
-          "C:\\Program Files\\dotnet\\library-packs": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
@@ -45,13 +44,9 @@
         "net7.0-windows7.0": {
           "targetAlias": "net7.0-windows",
           "dependencies": {
-            "Microsoft.Data.SqlClient": {
+            "Npgsql": {
               "target": "Package",
-              "version": "[5.1.1, )"
-            },
-            "System.Data.SqlClient": {
-              "target": "Package",
-              "version": "[4.8.5, )"
+              "version": "[7.0.4, )"
             }
           },
           "imports": [
@@ -73,7 +68,7 @@
               "privateAssets": "none"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.400\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.306\\RuntimeIdentifierGraph.json"
         }
       }
     }

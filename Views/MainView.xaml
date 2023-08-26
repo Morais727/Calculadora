@@ -165,7 +165,7 @@
             </Grid.RowDefinitions>
 
             <TextBlock Grid.Row="0" Text="Histórico" FontSize="18" FontWeight="Bold" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="5,5,0,0"/>
-            <TextBlock Grid.Row="0" Name="History" Text="---" FontSize="16" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="5,5,0,0"/>
+            <TextBlock Grid.Row="0" Name="History" Text="---" FontSize="14" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="5,5,0,0"/>
             <Rectangle Grid.Row="0" Height="1" Fill="Black" VerticalAlignment="Bottom"/>
             <TextBlock Grid.Row="1" Text="Memória" FontSize="18" FontWeight="Bold" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="5,5,0,0"/>
         </Grid>

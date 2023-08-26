@@ -108,9 +108,9 @@ namespace Trabalho_final
                 string resultado_equation = equation.Substring(position).Trim();
                 string equation_body = equation.Substring(0, position).Trim();
 
-                conexao.getDBConnection("insert into historico_calc(dt_atualizacao, equacao, resultado) VALUES(SYSDATETIME(), '" + equation_body + "', '" + resultado_equation + "');", "inserir");
+                conexao.getDBConnection("insert into historico_calc(dt_atualizacao, equacao, resultado) values(now(), '" + equation_body + "', '" + resultado_equation + "');", "inserir");
                 conexao.equacao_history = "";
-                conexao.getDBConnection("SELECT TOP 5 format(dt_atualizacao,'dd/MM/yyyy HH:mm') AS data_atu, equacao, resultado FROM historico_calc ORDER BY dt_atualizacao desc;", "selecionar");
+                conexao.getDBConnection("select dt_atualizacao - interval '3 hours' AS data_atu, equacao, resultado FROM historico_calc ORDER BY dt_atualizacao desc fetch first 5 rows only;", "selecionar");
                 History.Text = conexao.equacao_history;
                 
             }
@@ -124,7 +124,7 @@ namespace Trabalho_final
 
         private void show_history(object sender, RoutedEventArgs e)
         {
-            conexao.getDBConnection("SELECT TOP 5 format(dt_atualizacao,'dd/MM/yyyy HH:mm') AS data_atu, equacao, resultado FROM historico_calc ORDER BY dt_atualizacao desc;", "selecionar");
+            conexao.getDBConnection("select dt_atualizacao - interval '3 hours' AS data_atu, equacao, resultado FROM historico_calc ORDER BY dt_atualizacao desc fetch first 5 rows only;", "selecionar");
             History.Text = conexao.equacao_history;
         }
 
@@ -267,7 +267,7 @@ namespace Trabalho_final
                     case Key.Enter: // =
                         equation += "=";
                         //EXEMPLO USO CONEXAO SQL SERVER -- WILL
-                        conexao.getDBConnection("insert into historico_calc(dt_atualizacao, equacao, resultado) VALUES(SYSDATETIME(), '" + equation + "', '---');", "inserir");
+                        conexao.getDBConnection("insert into historico_calc(dt_atualizacao, equacao, resultado) values(now(), '" + equation + "', '---');", "inserir");
                         break;
 
                     // Lógica para outros
