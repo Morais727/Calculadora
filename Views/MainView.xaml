@@ -6,7 +6,7 @@
         xmlns:sys="clr-namespace:System;assembly=mscorlib"
         xmlns:local="clr-namespace:Trabalho_Final"
         mc:Ignorable="d"
-        Title="Calculadora" Loaded="show_history" Height="614" Width="680" ResizeMode="NoResize" WindowStartupLocation="CenterScreen" PreviewKeyDown="Window_KeyDownPreview"> 
+        Title="Calculadora" Loaded="show_history" Height="614" Width="800" ResizeMode="NoResize" WindowStartupLocation="CenterScreen" PreviewKeyDown="Window_KeyDownPreview"> 
 
     <!--Definindo um template para os botões-->
     <Window.Resources>
@@ -70,7 +70,7 @@
     <Grid>
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="Auto"/>
-            <ColumnDefinition Width="280"/>
+            <ColumnDefinition Width="400"/>
         </Grid.ColumnDefinitions>
 
         <!--Coluna da calculadora-->
