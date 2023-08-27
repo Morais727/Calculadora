@@ -52,7 +52,6 @@ namespace Trabalho_final.Controller
                     NpgsqlDataReader cmd_select = cmd.ExecuteReader();
                     while (cmd_select.Read())
                     {
-                        //MessageBox.Show((string)cmd_select["equacao"]);
                         equacao_history = equacao_history + "\n" + cmd_select["data_atu"].ToString() + " | " + (string)cmd_select["equacao"] + " " + cmd_select["resultado"];
                     }
                 }
