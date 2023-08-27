@@ -224,8 +224,7 @@ namespace Trabalho_final
                     case Key.Divide: // /
                         equation += "/";
                         break;
-                    case Key.Oem3: // ^
-                        isEnteringExponent = true;
+                    case Key.Oem3: // ^                       
                         equation += "^";   
                         break;
                     case Key.R: // r
