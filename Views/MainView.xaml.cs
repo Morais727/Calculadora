@@ -33,16 +33,11 @@ namespace Trabalho_final
         {
             InitializeComponent();
         }
-        private bool isEnteringExponent = false;
-
+      
         private void Button_Click(object sender, RoutedEventArgs e)
         {
             Button button = (Button)sender;
-            /*if (equation == "-" && !char.IsDigit(button.Content.ToString()[0]))
-                {
-                    equation = "0" + equation;
-                }
-            */
+
             equation += button.Content;
             Display.Content = equation;
             DisplayTop.Content = "";
@@ -92,7 +87,6 @@ namespace Trabalho_final
                 DisplayTop.Content = "";
             }
         }
-
 
         private void Negation(object sender, RoutedEventArgs e)
         {
@@ -144,7 +138,7 @@ namespace Trabalho_final
             DisplayTop.Content = "";
         }
 
-        public void MemoryClear(object sender, RoutedEventArgs e)
+        /*public void MemoryClear(object sender, RoutedEventArgs e)
         {
             Display.Content = "clear";
         }
@@ -163,6 +157,8 @@ namespace Trabalho_final
         {
             Display.Content = "save";
         }
+        */
+
         private void DisplayBorder_MouseRightButtonUp(object sender, MouseButtonEventArgs e)
 		{
 			// Verificar se o evento foi acionado pelo botão direito do mouse
@@ -265,7 +261,7 @@ namespace Trabalho_final
                     case Key.Back: // Backspace
                         equation = equation.Substring(0, equation.Length - 1);
                         break;
-                    case Key.S: // s
+                    /*case Key.S: // s
                         equation += "sin";
                         break;
                     case Key.C: // c
@@ -274,6 +270,7 @@ namespace Trabalho_final
                     case Key.L: // log
                         equation += "log";
                         break;
+                    */
                     case Key.OemComma: // ,
                         equation += ".";
                         break;

@@ -130,9 +130,9 @@ namespace Trabalho_final.Controller
         {
             if (IsInteger)
             {
-                return IntValue.ToString();
+                return Convert.ToString(IntValue, CultureInfo.InvariantCulture);
             }
-            return DoubleValue.ToString("N3");
+            return Convert.ToString(DoubleValue, CultureInfo.InvariantCulture);
         }
 
         public override bool Equals(object obj)
