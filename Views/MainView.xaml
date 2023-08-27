@@ -116,10 +116,11 @@
             <Button x:Name="MemSave" Style="{StaticResource MemoryButtonStyle}" Content="MS" Click="MemorySave" Grid.Row="1" Grid.Column="3"/>
             -->
             <!--Linha 2-->
-            <Button x:Name="Pi" Style="{StaticResource NumberButtonStyle}" Content="π" Click="Constant" Grid.Row="1" Grid.Column="0"/>        
-            <Button x:Name="Euler" Style="{StaticResource NumberButtonStyle}" Content='e' Click="Constant" Grid.Row="1" Grid.Column="1"/>
-            <Button x:Name="Clr" Style="{StaticResource NumberButtonStyle}" Content="C" Click="Clear" Grid.Row="1" Grid.Column="2"/>
-            <Button x:Name="Delete" Style="{StaticResource NumberButtonStyle}" Content="←" Click="Erase" Grid.Row="1" Grid.Column="3"/>
+            <Button x:Name="Expo" Style="{StaticResource NumberButtonStyle}" Content="^"  Click="Button_Click" Grid.Row="1" Grid.Column="0"/>
+            <Button x:Name="Clr" Style="{StaticResource NumberButtonStyle}" Content="C" Click="Clear" Grid.Row="1" Grid.Column="1"/>
+            <Border CornerRadius="50" Grid.Row="1" Grid.Column="2" Grid.ColumnSpan="2">
+                <Button x:Name="Delete" Content="←" Click="Erase" Grid.Row="1" Grid.Column="2" FontSize="24" Width="190" Height="50" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="1"/>
+            </Border>
 
             <!--Linha 3-->
             <!--
@@ -131,12 +132,12 @@
             <!--Linha 4-->
             <Button x:Name="Open" Style="{StaticResource NumberButtonStyle}" Content="(" Click="Button_Click" Grid.Row="2" Grid.Column="0"/>        
             <Button x:Name="Close" Style="{StaticResource NumberButtonStyle}" Content=")" Click="Button_Click" Grid.Row="2" Grid.Column="1"/>
-            <Button x:Name="Expo" Style="{StaticResource NumberButtonStyle}" Content="^"  Click="Button_Click" Grid.Row="2" Grid.Column="2"/>
+            <Button x:Name="Sqr" Style="{StaticResource NumberButtonStyle}" Content="x²" Click="Square" Grid.Row="2" Grid.Column="2"/>
             <Button x:Name="Division" Style="{StaticResource NumberButtonStyle}" Content="/" Click="Button_Click" Grid.Row="2" Grid.Column="3"/>
 
             <!--Linha 5-->
-            <Button x:Name="Epx" Style="{StaticResource NumberButtonStyle}" Content="exp" Click="Button_Click" Grid.Row="3" Grid.Column="0"/>        
-            <Button x:Name="Mod" Style="{StaticResource NumberButtonStyle}" Content="mod" Click="Button_Click" Grid.Row="3" Grid.Column="1"/>
+            <Button x:Name="Pi" Style="{StaticResource NumberButtonStyle}" Content="π" Click="Constant" Grid.Row="3" Grid.Column="0"/>        
+            <Button x:Name="Euler" Style="{StaticResource NumberButtonStyle}" Content='e' Click="Constant" Grid.Row="3" Grid.Column="1"/>
             <Button x:Name="Sqrt" Style="{StaticResource NumberButtonStyle}" Content="√" Click="Button_Click" Grid.Row="3" Grid.Column="2"/>
             <Button x:Name="Pctg" Style="{StaticResource NumberButtonStyle}" Content="%" Click="Button_Click" Grid.Row="3" Grid.Column="3"/>
 
