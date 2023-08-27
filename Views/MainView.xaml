@@ -95,7 +95,12 @@
             </Grid.ColumnDefinitions>
             
             <!--Linha 0: Display-->
-            <Border Background="LightBlue" BorderBrush="Black" BorderThickness="2" CornerRadius="5" HorizontalAlignment="Center" VerticalAlignment="Center" Grid.Row="0" Height="126" Width="388" Grid.ColumnSpan="4">
+            <Border Name="Dsp" Background="LightBlue" BorderBrush="Black" BorderThickness="2" CornerRadius="5" HorizontalAlignment="Center" VerticalAlignment="Center" Grid.Row="0" Height="126" Width="388" Grid.ColumnSpan="4">
+                <Border.ContextMenu>
+                    <ContextMenu>
+                        <MenuItem Header="Colar" Click="PasteMenuItem_Click" />
+                    </ContextMenu>
+                </Border.ContextMenu>
                 <StackPanel>
                     <Label x:Name="DisplayTop" Content="" FontSize="18" HorizontalAlignment="Right" VerticalAlignment="Top" Height="30" Opacity="0.6"/>
                     <Label x:Name="Display" Content="0" FontSize="30" HorizontalAlignment="Right" VerticalAlignment="Center" Height="110" />

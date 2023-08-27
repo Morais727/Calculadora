@@ -165,6 +165,30 @@ namespace Trabalho_final
         {
             Display.Content = "save";
         }
+        private void DisplayBorder_MouseRightButtonUp(object sender, MouseButtonEventArgs e)
+		{
+			// Verificar se o evento foi acionado pelo botão direito do mouse
+			if (e.ChangedButton == MouseButton.Right)
+			{
+				// Obter o Border que acionou o evento
+				Border border = (Border)sender;
+
+				// Exibir o ContextMenu na posição do mouse
+				ContextMenu contextMenu = border.FindResource("ContextMenu") as ContextMenu;
+				contextMenu.PlacementTarget = border;
+				contextMenu.IsOpen = true;
+			}
+		}
+
+        private void PasteMenuItem_Click(object sender, RoutedEventArgs e)
+        {
+            if (Clipboard.ContainsText())
+            {
+                string clipboardText = Clipboard.GetText();
+                equation = clipboardText;
+                Display.Content = clipboardText;
+            }
+        }
 
         private void Window_KeyDownPreview(object sender, KeyEventArgs e)
         {
