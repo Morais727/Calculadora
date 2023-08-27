@@ -45,6 +45,7 @@ namespace Trabalho_final
             */
             equation += button.Content;
             Display.Content = equation;
+            DisplayTop.Content = "";
         }
 
 
@@ -52,61 +53,20 @@ namespace Trabalho_final
         {
             try
             {
-                /*if (!string.IsNullOrEmpty(equation) && equation[0] == '-')
-                {
-                    equation = "0" + equation;
-                }
-                */
-                
-                //int positionroot = equation.IndexOf("√");
-                /*while (positionroot >= 0)
-                {
-                    string equation_body1 = equation.Substring(positionroot + 1);
-                    
-                    Number n = Number.Create(equation_body1);
-                    
-                    var raizQuadrada = Math.Sqrt(n.AsDouble());
-                    var resultroot = raizQuadrada.ToString();
-                    
-                    equation = equation.Substring(0, positionroot) + resultroot + equation.Substring(positionroot + 1 + equation_body1.Length);
-                    positionroot = equation.IndexOf("√", positionroot + resultroot.Length);
-                }
-                */
-
-               
-                //int positionexp = equation.IndexOf("^");
-                /*while (positionexp >= 0)
-                {
-                    // Encontrar a posição do início da base
-                    int baseStart = positionexp - 1;
-                    while (baseStart >= 0 && char.IsDigit(equation[baseStart]))
-                    {
-                        baseStart--;
-                    }
-                    baseStart++;
-
-                    // Extrair a base e o expoente
-                    string equation_base = equation.Substring(baseStart, positionexp - baseStart);
-                    string equation_exponent = equation.Substring(positionexp + 1);
-
-                    Number baseNumber = Number.Create(equation_base);
-                    Number exponentNumber = Number.Create(equation_exponent);
-                    var resultexp = Number.Pow(baseNumber, exponentNumber);
-
-                    // Substituir a base pelo resultado
-                    equation = equation.Substring(0, baseStart) + resultexp + equation.Substring(positionexp + 1 + equation_exponent.Length);
-
-                    // Encontrar a próxima ocorrência de "^"
-                    positionexp = equation.IndexOf("^", baseStart + resultexp.ToString().Length);
-                }
-                */
 
                 var calculator = new Trabalho_final.Controller.CalculatorController();
                 var result = calculator.Calculate(equation);
 
-                equation = equation + " = " + result.ToString();
+                var subequation = equation;
+                equation =  result.ToString();
+                
                 Display.Content = equation;
+                DisplayTop.Content = subequation + "=";
+                // PDATABASE AZURE
 
+
+                //Gambiarra para que o Will arrume mais tarde:
+                equation = subequation + "=" + result.ToString();
                 // PDATABASE AZURE
                 int position = equation.IndexOf("=") + 1;
                 string resultado_equation = equation.Substring(position).Trim();
@@ -138,6 +98,7 @@ namespace Trabalho_final
             {
                 equation += "^2"; 
                 Display.Content = equation;
+                DisplayTop.Content = "";
             }
         }
 
@@ -154,7 +115,7 @@ namespace Trabalho_final
                 {
                     equation = "-" + equation; 
                 }
-                
+                DisplayTop.Content = "";
                 Display.Content = equation;
             }
         }
@@ -168,12 +129,13 @@ namespace Trabalho_final
         {
             equation = equation.Substring(0, equation.Length - 1);
             Display.Content = equation;
-
+            DisplayTop.Content = "";
         }
         private void Clear(object sender, RoutedEventArgs e)
         {
             equation = "";
             Display.Content = equation;
+            DisplayTop.Content = "";
         }
 
         private void Constant(object sender, RoutedEventArgs e)
@@ -188,6 +150,7 @@ namespace Trabalho_final
                 equation += "3.14159";
             }
             Display.Content = equation;
+            DisplayTop.Content = "";
         }
 
         public void MemoryClear(object sender, RoutedEventArgs e)
@@ -313,6 +276,7 @@ namespace Trabalho_final
                         break;
                 }
                 Display.Content = equation;
+                DisplayTop.Content = "";
             }
             catch (Exception ex)
             {
