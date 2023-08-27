@@ -3,7 +3,6 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using System.Data;
-using System.Data.SqlClient;
 using System.Windows;
 using System.Configuration;
 using Npgsql;
@@ -15,7 +14,7 @@ namespace Trabalho_final.Controller
         
         public string equacao_history { get; set; }
 
-        //Dados SQL Server do Azure
+        //Dados PostgreSQL do Azure
         string Server = "inf-0999-server.postgres.database.azure.com";
         string Port = "5432";
         string Username = "Administrador";
