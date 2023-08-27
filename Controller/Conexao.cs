@@ -15,7 +15,7 @@ namespace Trabalho_final.Controller
         public string equacao_history { get; set; }
 
         //Dados PostgreSQL do Azure
-        string Server = "inf-0999-server.postgres.database.azure.com";
+        string Server = "inf-0999-proj-final.postgres.database.azure.com";
         string Port = "5432";
         string Username = "Administrador";
         string Password = "inF0999un1c@mp";
