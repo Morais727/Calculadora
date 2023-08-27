@@ -248,7 +248,7 @@ namespace Trabalho_final
                     case Key.Enter: // =
                         Calculate(sender, e);
                         // DATABASE AZURE
-                        conexao.getDBConnection("insert into historico_calc(dt_atualizacao, equacao, resultado) values(now(), '" + equation + "', '---');", "inserir");
+                        //conexao.getDBConnection("insert into historico_calc(dt_atualizacao, equacao, resultado) values(now(), '" + equation + "', '---');", "inserir");
                         break;
 
                     // Lógica para outros
