@@ -79,6 +79,17 @@ namespace Trabalho_final.Controller
             return Number.FromValue(result);
         }
 
+        public static Number Percentage(Number a, Number b, char opp = '%')
+        {
+            if (opp == '%')
+                        return b/Number.Create("100");
+                    else
+                        if (opp == '+')
+                            return a + a*b/Number.Create("100");
+                        else
+                            return a - a*b/Number.Create("100");
+        }
+
         public static Number operator +(Number a, Number b)
         {
             if (a.IsInteger && b.IsInteger)
@@ -121,7 +132,7 @@ namespace Trabalho_final.Controller
             {
                 return IntValue.ToString();
             }
-            return DoubleValue.ToString("N2");
+            return DoubleValue.ToString("N3");
         }
 
         public override bool Equals(object obj)

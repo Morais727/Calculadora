@@ -51,16 +51,17 @@ namespace Trabalho_final.Controller
                     continue;
                 }
 
-                var operation = Lexer.Parse(restOfExpression, @"\+|\-|\*|\/|\^|\√", out tokenLength).FirstOrDefault();
+                var operation = Lexer.Parse(restOfExpression, @"\+|\-|\*|\/|\^|\√|%", out tokenLength).FirstOrDefault();
                 if (operation != 0)
                 {
                     while (_operations.Count > 0 && OpPrecedence.IsPrecided(operation, _operations.Peek()))
                     {
-                        if(_operations.Peek() == '√'){
+                        if(_operations.Peek() == '%')
+                            _values.Push(Calculate(_operations.Pop(),_values.Pop(), Number.Create("0")));
+                        else if(_operations.Peek() == '√')
                             _values.Push(Calculate(_operations.Pop(), _values.Pop(), Number.Create("0")));
-                        }else{
+                        else
                             _values.Push(Calculate(_operations.Pop(), _values.Pop(), _values.Pop()));
-                        }
                     }
                     _operations.Push(operation);
                     i += tokenLength;
@@ -69,11 +70,20 @@ namespace Trabalho_final.Controller
 
             while (_operations.Count > 0)
             {
-                if(_operations.Peek() == '√'){
-                    _values.Push(Calculate(_operations.Pop(), _values.Pop(), Number.Create("0")));
-                }else{
-                    _values.Push(Calculate(_operations.Pop(), _values.Pop(), _values.Pop()));
+                if(_operations.Peek() == '%'){
+                    var opaux = _operations.Pop();
+                    if(_operations.Count > 0 && (_operations.Peek() == '+' || _operations.Peek() == '-')){
+                        _values.Push(Calculate(opaux, _values.Pop(), _values.Pop(),_operations.Pop()));
+                    }
+                    else{
+                        _values.Push(Calculate(opaux,_values.Pop(), Number.Create("0")));
+                    }
                 }
+                else 
+                    if(_operations.Peek() == '√')
+                        _values.Push(Calculate(_operations.Pop(), _values.Pop(), Number.Create("0")));
+                else
+                    _values.Push(Calculate(_operations.Pop(), _values.Pop(), _values.Pop()));
             }
 
             var result = _values.Pop();
@@ -85,7 +95,7 @@ namespace Trabalho_final.Controller
             return result;
         }
 
-        private static Number Calculate(char op, Number b, Number a)
+        private static Number Calculate(char op, Number b, Number a, char opp = '%')
         {
             switch (op)
             {
@@ -101,6 +111,8 @@ namespace Trabalho_final.Controller
                     return Number.Pow(a, b);
                 case '√':
                     return Number.Root(b);
+                case '%':
+                    return Number.Percentage(a,b,opp);
                 default:
                     throw new InvalidOperationException(op.ToString());
             }
