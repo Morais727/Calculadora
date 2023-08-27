@@ -111,11 +111,11 @@ namespace Trabalho_final
             }
         }
 
-        private void AddComma(object sender, RoutedEventArgs e)
+        /*private void AddComma(object sender, RoutedEventArgs e)
         {
             
         }
-
+        */
         private void Erase(object sender, RoutedEventArgs e)
         {
             equation = equation.Substring(0, equation.Length - 1);
