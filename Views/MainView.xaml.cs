@@ -275,7 +275,7 @@ namespace Trabalho_final
                         equation += "log";
                         break;
                     case Key.OemComma: // ,
-                        equation += ",";
+                        equation += ".";
                         break;
                     case Key.OemBackslash: // \
                         equation += "-1";
