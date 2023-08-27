@@ -64,7 +64,7 @@ namespace Trabalho_final
                 DisplayTop.Content = subequation + "=";
 
                 // DATABASE AZURE
-                conexao.getDBConnection("insert into historico_calc(dt_atualizacao, equacao, resultado) values(now(), '" + subequation + " = ', '" + equation + "');", "inserir");
+                conexao.getDBConnection("insert into historico_calc(dt_atualizacao, equacao, resultado) values(now(), '" + subequation + " =', '" + equation + "');", "inserir");
                 conexao.equacao_history = "";
                 conexao.getDBConnection("select dt_atualizacao - interval '3 hours' AS data_atu, equacao, resultado FROM historico_calc ORDER BY dt_atualizacao desc fetch first 5 rows only;", "selecionar");
                 History.Text = conexao.equacao_history;
@@ -80,6 +80,7 @@ namespace Trabalho_final
 
         private void show_history(object sender, RoutedEventArgs e)
         {
+            // DATABASE AZURE
             conexao.getDBConnection("select dt_atualizacao - interval '3 hours' AS data_atu, equacao, resultado FROM historico_calc ORDER BY dt_atualizacao desc fetch first 5 rows only;", "selecionar");
             History.Text = conexao.equacao_history;
         }
@@ -224,7 +225,7 @@ namespace Trabalho_final
                         break;
                     case Key.Enter: // =
                         equation += "=";
-                        //INSERE NO BANCO
+                        // DATABASE AZURE
                         conexao.getDBConnection("insert into historico_calc(dt_atualizacao, equacao, resultado) values(now(), '" + equation + "', '---');", "inserir");
                         break;
 
