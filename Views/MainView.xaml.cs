@@ -53,15 +53,14 @@ namespace Trabalho_final
         {
             try
             {
-
                 var calculator = new Trabalho_final.Controller.CalculatorController();
                 var result = calculator.Calculate(equation);
 
                 var subequation = equation;
                 equation =  result.ToString();
                 
-                Display.Content = equation;
                 DisplayTop.Content = subequation + "=";
+                Display.Content = equation;
 
                 // DATABASE AZURE
                 conexao.getDBConnection("insert into historico_calc(dt_atualizacao, equacao, resultado) values(now(), '" + subequation + " =', '" + equation + "');", "inserir");
@@ -73,7 +72,6 @@ namespace Trabalho_final
             catch (Exception ex)
             {
                 Console.WriteLine("Error in Calculate: " + ex.ToString());
-               
             }
         }
 
@@ -248,7 +246,7 @@ namespace Trabalho_final
                         equation += "√"; 
                         break;
                     case Key.Enter: // =
-                        Calculate(null, null);
+                        Calculate(sender, e);
                         // DATABASE AZURE
                         conexao.getDBConnection("insert into historico_calc(dt_atualizacao, equacao, resultado) values(now(), '" + equation + "', '---');", "inserir");
                         break;
@@ -292,7 +290,6 @@ namespace Trabalho_final
                         break;
                 }
                 Display.Content = equation;
-                DisplayTop.Content = "";
             }
             catch (Exception ex)
             {
