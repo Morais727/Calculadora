@@ -62,17 +62,9 @@ namespace Trabalho_final
                 
                 Display.Content = equation;
                 DisplayTop.Content = subequation + "=";
-                // PDATABASE AZURE
 
-
-                //Gambiarra para que o Will arrume mais tarde:
-                equation = subequation + "=" + result.ToString();
-                // PDATABASE AZURE
-                int position = equation.IndexOf("=") + 1;
-                string resultado_equation = equation.Substring(position).Trim();
-                string equation_body = equation.Substring(0, position).Trim();
-
-                conexao.getDBConnection("insert into historico_calc(dt_atualizacao, equacao, resultado) values(now(), '" + equation_body + "', '" + resultado_equation + "');", "inserir");
+                // DATABASE AZURE
+                conexao.getDBConnection("insert into historico_calc(dt_atualizacao, equacao, resultado) values(now(), '" + subequation + " = ', '" + equation + "');", "inserir");
                 conexao.equacao_history = "";
                 conexao.getDBConnection("select dt_atualizacao - interval '3 hours' AS data_atu, equacao, resultado FROM historico_calc ORDER BY dt_atualizacao desc fetch first 5 rows only;", "selecionar");
                 History.Text = conexao.equacao_history;
